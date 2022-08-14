@@ -12,21 +12,21 @@
 <!--[if gt IE 8]><!-->
 <html <?php language_attributes(); ?> class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon & Apple Touch Icon -->
-    <?php
-    $favicon = IMAGES . '/icons/favicon.ico';
-    $touchicon = IMAGES . '/icons/apple-touch-icon-precomposed.png';
-    ?>
-    <link rel="shortcut icon" href="<?php esc_html_e($favicon); ?>">
-    <link rel="apple-touch-icon-precomposed" href="<?php esc_html_e($touchicon); ?>" sizes="152x152">
+	<?php
+	$favicon   = IMAGES . '/icons/favicon.ico';
+	$touchicon = IMAGES . '/icons/apple-touch-icon-precomposed.png';
+	?>
+    <link rel="shortcut icon" href="<?php esc_html_e( $favicon ); ?>">
+    <link rel="apple-touch-icon-precomposed" href="<?php esc_html_e( $touchicon ); ?>" sizes="152x152">
 
-    <?php wp_head(); ?>
+	<?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?> >
@@ -42,23 +42,27 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'benawpbootstrapportfolio' ); ?> </span>
+                <span class="sr-only"><?php esc_html_e( 'Toggle navigation', DOMAIN ); ?> </span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
-                <?php bloginfo( 'name' ); ?>
+				<?php bloginfo( 'name' ); ?>
             </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+			<?php
+			wp_nav_menu(
+				array(
+					'menu_class'     => 'nav navbar-nav navbar-right',
+					'theme_location' => 'main-menu',
+					'container'      => false
+				)
+			);
+			?>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
