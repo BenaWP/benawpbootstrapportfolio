@@ -14,7 +14,7 @@ const JS     = THEME_URI . '/assets/js';
 const DOMAIN = 'benawpbootstrapportfolio';
 
 /**
- * 2 . CONSTANTS
+ * 2 . SETUP THEME
  */
 if ( ! function_exists( 'benawp_theme_setup' ) ) {
 	function benawp_theme_setup() {
