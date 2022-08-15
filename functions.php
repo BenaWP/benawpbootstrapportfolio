@@ -38,3 +38,48 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 
 	add_action( 'after_setup_theme', 'benawp_theme_setup' );
 }
+
+/**
+ * 3 . GET POST META
+ */
+if ( ! function_exists( 'benawp_post_meta' ) ) {
+	function benawp_post_meta() {
+		if ( get_post_type() === 'post' ) {
+			// Post author
+			echo '<p class="post-meta">';
+			esc_html_e( 'Par', DOMAIN );
+			printf( '<a href="%1$s" rel="author"> %2$s </a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
+			esc_html_e( 'Le', DOMAIN );
+			echo '<span>' . get_the_date() . '</span></p>';
+		}
+	}
+}
+
+/**
+ * 4 . NUMBERED PAGINATION
+ */
+
+if ( ! function_exists( 'benawp_numbered_pagination' ) ) {
+	function benawp_numbered_pagination() {
+		$args = array(
+			'prev_next' => false,
+			'type'      => 'array'
+		);
+
+		echo '<div class="col-md-12">';
+		$pagination = paginate_links( $args );
+
+		if ( is_array( $pagination ) ){
+			echo '<ul class="nav nav-pills">';
+			foreach ( $pagination as $page ){
+				if ( strpos( $page, 'current' ) ){
+					echo '<li class="active"><a href="#"' . $page . '</a></li>';
+				} else {
+					echo '<li>' . $page . '</li>';
+				}
+			}
+			echo '</ul>';
+		}
+		echo '</div>';
+	}
+}
