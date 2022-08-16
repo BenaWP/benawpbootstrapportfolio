@@ -10,10 +10,10 @@
  */
 define( 'THEME_URI', get_stylesheet_directory_uri() );
 const IMAGES     = THEME_URI . '/assets/img';
-const JS         = THEME_URI . '/assets/js';
 const CSS         = THEME_URI . '/assets/css';
-const DOMAIN     = 'benawpbootstrapportfolio';
+const JS         = THEME_URI . '/assets/js';
 const COMPONENTS = THEME_URI . '/components';
+const DOMAIN     = 'benawpbootstrapportfolio';
 
 
 /**
