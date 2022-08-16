@@ -9,9 +9,12 @@
  * 1 . CONSTANTS
  */
 define( 'THEME_URI', get_stylesheet_directory_uri() );
-const IMAGES = THEME_URI . '/assets/img';
-const JS     = THEME_URI . '/assets/js';
-const DOMAIN = 'benawpbootstrapportfolio';
+const IMAGES     = THEME_URI . '/assets/img';
+const JS         = THEME_URI . '/assets/js';
+const CSS         = THEME_URI . '/assets/css';
+const DOMAIN     = 'benawpbootstrapportfolio';
+const COMPONENTS = THEME_URI . '/components';
+
 
 /**
  * 2 . SETUP THEME
@@ -103,4 +106,34 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 	}
 
 	add_action( 'widgets_init', 'benawp_widget_init' );
+}
+
+/**
+ * 6. SCRIPTS
+ */
+if ( ! function_exists( 'benawp_scripts' ) ) {
+	function benawp_scripts() {
+		// Register scripts
+		wp_register_script( 'modernizr-js', JS . '/vendor/modernizr-2.6.2.min.js', false, false, false );
+		wp_register_script( 'bootstrap-js', COMPONENTS . '/bower_components/bootstrap/dist/js/bootstrap.js', [ 'jquery' ], false, true );
+		wp_register_script( 'isotope-js', COMPONENTS . '/bower_components/isotope/dist/isotope.pkgd.min.js', false, false, true );
+		wp_register_script( 'plugins-js', JS . '/plugins.js', false, false, true );
+		wp_register_script( 'main-js', JS . '/main.js', false, false, true );
+
+		// Load the custom scripts
+		wp_enqueue_script( 'modernizr-js' );
+		wp_enqueue_script( 'bootstrap-js' );
+		wp_enqueue_script( 'isotope-js' );
+		wp_enqueue_script( 'plugins-js' );
+		wp_enqueue_script( 'main-js' );
+
+		// Load the stylesheets
+		wp_enqueue_style( 'bootstrap-css', COMPONENTS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
+		wp_enqueue_style( 'style-css', CSS . '/style.css' );
+
+
+
+	}
+
+	add_action( 'wp_enqueue_scripts', 'benawp_scripts' );
 }
