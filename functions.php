@@ -69,10 +69,10 @@ if ( ! function_exists( 'benawp_numbered_pagination' ) ) {
 		echo '<div class="col-md-12">';
 		$pagination = paginate_links( $args );
 
-		if ( is_array( $pagination ) ){
+		if ( is_array( $pagination ) ) {
 			echo '<ul class="nav nav-pills">';
-			foreach ( $pagination as $page ){
-				if ( strpos( $page, 'current' ) ){
+			foreach ( $pagination as $page ) {
+				if ( strpos( $page, 'current' ) ) {
 					echo '<li class="active"><a href="#"' . $page . '</a></li>';
 				} else {
 					echo '<li>' . $page . '</li>';
@@ -82,4 +82,25 @@ if ( ! function_exists( 'benawp_numbered_pagination' ) ) {
 		}
 		echo '</div>';
 	}
+}
+
+/**
+ * 5. REGISTER WIDGET AREAS
+ */
+if ( ! function_exists( 'benawp_widget_init' ) ) {
+	function benawp_widget_init() {
+		if ( function_exists( 'register_sidebar' ) ) {
+			register_sidebar( array(
+				'name'          => __( 'Zone de widget principale', DOMAIN ),
+				'id'            => 'main-sidebar',
+				'description'   => __( 'Apparaît dans les pages du blog', DOMAIN ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div> <!-- end widget -->',
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>'
+			) );
+		}
+	}
+
+	add_action( 'widgets_init', 'benawp_widget_init' );
 }
