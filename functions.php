@@ -10,7 +10,7 @@
  */
 define( 'THEME_URI', get_stylesheet_directory_uri() );
 const IMAGES     = THEME_URI . '/assets/img';
-const CSS         = THEME_URI . '/assets/css';
+const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
 const COMPONENTS = THEME_URI . '/components';
 const DOMAIN     = 'benawpbootstrapportfolio';
@@ -40,6 +40,21 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 	}
 
 	add_action( 'after_setup_theme', 'benawp_theme_setup' );
+}
+
+/**
+ * REPLACE THE DEFAULT READ MORE LINK By WP
+ */
+if ( ! function_exists( 'benawp_new_excerpt_more' ) ) {
+	function benawp_new_excerpt_more( $more ) {
+		global $post;
+
+		$new_read_more = '...<a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( ' Continuez à lire', DOMAIN ) . '</a>';
+
+		return $new_read_more;
+	}
+
+	add_filter( 'excerpt_more', 'benawp_new_excerpt_more', 10, 1 );
 }
 
 /**
@@ -130,7 +145,6 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 		// Load the stylesheets
 		wp_enqueue_style( 'bootstrap-css', COMPONENTS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
 		wp_enqueue_style( 'style-css', CSS . '/style.css' );
-
 
 
 	}

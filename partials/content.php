@@ -22,7 +22,7 @@
             ?>
         </header>
 
-        <?php the_content( __( 'Poursuivre la lecture', DOMAIN ) ); ?>
+        <?php the_excerpt(); ?>
 
     </article>
 </div>
