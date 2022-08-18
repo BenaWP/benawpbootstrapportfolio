@@ -169,7 +169,8 @@ p {
     filter: grayscale(50%);
 }
 
-.filterable-portfolio {
+.filterable-portfolio,
+.single-post{
     margin-bottom: 3rem;
 }
 
