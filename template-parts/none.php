@@ -1,6 +1,6 @@
 <?php
 /**
- * content-none.php
+ * none.php
  *
  * The template to be displayed for missing content.
  */

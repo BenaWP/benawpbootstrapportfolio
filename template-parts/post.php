@@ -1,6 +1,6 @@
 <?php
 /**
- * single-post.php
+ * post.php
  * The single post content template file.
  */
 ?>

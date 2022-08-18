@@ -33,10 +33,10 @@ get_header();
             <div class="posts col-md-8 col-md-pull-4">
                 <div class="row">
 					<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
-						<?php get_template_part( 'partials/content', get_post_format() ); ?>
+						<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 					<?php endwhile; ?>
 					<?php else: ?>
-						<?php get_template_part( 'partials/content', 'none' ); ?>
+						<?php get_template_part( 'template-parts/none' ); ?>
 					<?php endif; ?>
 					<?php
 					// Load numbered pagination
