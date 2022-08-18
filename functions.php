@@ -63,12 +63,19 @@ if ( ! function_exists( 'benawp_new_excerpt_more' ) ) {
 if ( ! function_exists( 'benawp_post_meta' ) ) {
 	function benawp_post_meta() {
 		if ( get_post_type() === 'post' ) {
-			// Post author
 			echo '<p class="post-meta">';
-			esc_html_e( '<i class="fa-solid fa-user"></i>', DOMAIN );
+			// Post author
+			echo '<span class="post-author">';
+			echo '<i class="fa-solid fa-user"></i>';
 			printf( '<a href="%1$s" rel="author"> %2$s </a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
-			esc_html_e( '<i class="fa-solid fa-calendar"></i>', DOMAIN );
-			echo '<span>' . get_the_date() . '</span></p>';
+			echo '</span>'; // <!-- post-author >
+
+			// Post date
+			echo '<span class="post-date">';
+			echo '<i class="fa-solid fa-calendar"></i>';
+			echo '<span>' . get_the_date() . '</span>';
+			echo '</span>';    // <!-- end post-date >
+			echo '</p>'; // <!-- end post-meta >
 		}
 	}
 }
@@ -146,8 +153,6 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 		wp_enqueue_style( 'fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' );
 		wp_enqueue_style( 'bootstrap-css', COMPONENTS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
 		wp_enqueue_style( 'style-css', CSS . '/style.css' );
-
-
 	}
 
 	add_action( 'wp_enqueue_scripts', 'benawp_scripts' );
