@@ -116,7 +116,7 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 	function benawp_widget_init() {
 		if ( function_exists( 'register_sidebar' ) ) {
 			register_sidebar( array(
-				'name'          => __( 'Zone de widget principale', DOMAIN ),
+				'name'          => __( 'Bare latérale de la page d\'accueil', DOMAIN ),
 				'id'            => 'main-sidebar',
 				'description'   => __( 'Apparaît dans les pages du blog', DOMAIN ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
