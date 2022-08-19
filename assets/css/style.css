@@ -8,7 +8,7 @@
 .portfolio-item img,
 .posts .post img,
 .posts .post-excerpt .post-meta a,
-.recent-projects img {
+.widget_benawp-recent-projects img {
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
 }
@@ -246,17 +246,21 @@ p {
     border-bottom: 1px dotted #838383;
 }
 
-.recent-projects li {
-    margin-bottom: 1rem;
+.widget_benawp-recent-projects ul{
+    padding: 15px 0;
 }
 
-.recent-projects img {
+.widget_benawp-recent-projects li {
+    margin-bottom: 2rem;
+}
+
+.widget_benawp-recent-projects img {
     border-radius: 4px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 
-.recent-projects img:hover {
+.widget_benawp-recent-projects img:hover {
     -webkit-filter: grayscale(50%);
     filter: grayscale(50%);
 }

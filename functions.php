@@ -9,6 +9,7 @@
  * 1 . CONSTANTS
  */
 define( 'THEME_URI', get_stylesheet_directory_uri() );
+define( 'THEME_ROOT', get_template_directory() );
 const IMAGES     = THEME_URI . '/assets/img';
 const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
@@ -157,3 +158,8 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 
 	add_action( 'wp_enqueue_scripts', 'benawp_scripts' );
 }
+
+/**
+ * 7. Widgets
+ */
+require_once THEME_ROOT . '/inc/widgets/benawp-recent-projects.php';
