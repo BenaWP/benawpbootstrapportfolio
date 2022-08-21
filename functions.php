@@ -163,3 +163,13 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
  * 7. Widgets
  */
 require_once THEME_ROOT . '/inc/widgets/benawp-recent-projects.php';
+
+/**
+ * 8. Validate forms
+ * VALIDATE FIELD LENGTH
+ */
+if ( ! function_exists( 'benawp_validate_length' ) ) {
+	function benawp_validate_length( $fieldValue, $minLength ) {
+		return ( strlen( trim( $fieldValue ) ) > $minLength );
+	}
+}
