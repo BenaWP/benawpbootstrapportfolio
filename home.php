@@ -1,6 +1,9 @@
 <?php
+/**
+ * home.php
+ * Template for listing our blog lists
+ */
 get_header();
-echo '<h1> Home.php </h1>';
 ?>
     <div class="container-fluid text-center">
         <div class="jumbotron">
