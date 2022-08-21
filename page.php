@@ -1,6 +1,9 @@
 <?php
+/**
+ * page.php
+ * Diplaying a page content, if the user dont use one of our template page
+ */
 get_header();
-echo '<h1> Page.php </h1>';
 
 /* Start the Loop */
 while ( have_posts() ) :
