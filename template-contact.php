@@ -1,6 +1,8 @@
 <?php
-/*
-* Template Name: Contact
+/**
+ * template-contact.php
+ *
+ * Template Name: Contact
 */
 ?>
 

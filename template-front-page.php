@@ -1,5 +1,7 @@
 <?php
 /**
+ * template-front-page.php
+ *
  * Template Name: Homepage
  */
 //Load header.php
