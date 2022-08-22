@@ -15,7 +15,7 @@ const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
 const COMPONENTS = THEME_URI . '/components';
 const DOMAIN     = 'benawpbootstrapportfolio';
-const BG = '#222222';
+const BG         = '#222222';
 
 
 /**
@@ -184,6 +184,8 @@ if ( ! function_exists( 'benawp_validate_length' ) ) {
  */
 if ( ! function_exists( 'benawp_customize_register' ) ) {
 	function benawp_customize_register( $wp_customize ) {
+
+		// BG color
 		$wp_customize->add_section( 'bg-color', array(
 			'title'       => esc_html__( 'Couleur de fond', DOMAIN ),
 			'description' => esc_html__( 'Choisir une couleur pour le fond', DOMAIN ),
@@ -200,6 +202,39 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 				'label'    => esc_html__( 'Choisir une couleur', DOMAIN ),
 				'section'  => 'bg-color',
 				'settings' => 'body-bg'
+			)
+		) );
+
+		// Jumbotron
+		$wp_customize->add_section( 'jumbotron', array(
+			'title'       => esc_html__( 'Jumbotron', DOMAIN ),
+			'description' => esc_html__( 'Titre puis sous titre', DOMAIN ),
+			'priority'    => 2,
+		) );
+		$wp_customize->add_setting( 'jumbotron-title', array(
+			'default'   => esc_html__( 'Hello, my name is Yvon Aulien Benahita.', DOMAIN ),
+			'transport' => 'refresh'
+		) );
+		$wp_customize->add_setting( 'jumbotron-subtitle', array(
+			'default'   => esc_html__( 'I sell websites and website accessories.', DOMAIN ),
+			'transport' => 'refresh'
+		) );
+		$wp_customize->add_control( new WP_Customize_Control(
+			$wp_customize,
+			'jumbotron-title-customization',
+			array(
+				'label'    => esc_html__( 'Titre', DOMAIN ),
+				'section'  => 'jumbotron',
+				'settings' => 'jumbotron-title'
+			)
+		) );
+		$wp_customize->add_control( new WP_Customize_Control(
+			$wp_customize,
+			'jumbotron-subtitle-customization',
+			array(
+				'label'    => esc_html__( 'Sous titre', DOMAIN ),
+				'section'  => 'jumbotron',
+				'settings' => 'jumbotron-subtitle'
 			)
 		) );
 	}
