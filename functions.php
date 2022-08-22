@@ -166,10 +166,59 @@ require_once THEME_ROOT . '/inc/widgets/benawp-recent-projects.php';
 
 /**
  * 8. Validate forms
- * VALIDATE FIELD LENGTH
+ * Vaidate field length
  */
 if ( ! function_exists( 'benawp_validate_length' ) ) {
 	function benawp_validate_length( $fieldValue, $minLength ) {
 		return ( strlen( trim( $fieldValue ) ) > $minLength );
 	}
+}
+
+
+/**
+ * 9. Customizer API
+ *
+ * @param object $wp_customize The Customize API object
+ */
+if ( ! function_exists( 'benawp_customize_register' ) ) {
+	function benawp_customize_register( $wp_customize ) {
+		$wp_customize->add_section( 'bg-color', array(
+			'title'       => esc_html__( 'Couleur de fond', DOMAIN ),
+			'description' => esc_html__( 'Choisir une couleur pour le fond', DOMAIN ),
+			'priority'    => 1,
+		) );
+		$wp_customize->add_setting( 'body-bg', array(
+			'default'   => '#222222',
+			'transport' => 'refresh'
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control(
+			$wp_customize,
+			'body-background-color',
+			array(
+				'label'    => esc_html__( 'Choisir une couleur', DOMAIN ),
+				'section'  => 'bg-color',
+				'settings' => 'body-bg'
+			)
+		) );
+	}
+
+	add_action( 'customize_register', 'benawp_customize_register' );
+}
+
+/**
+ * The function called whe we change the bacgroud color
+ */
+if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
+	function benawp_bg_color_customize_css() {
+		?>
+        <style>
+            html,
+            body {
+                background: <?php esc_html_e( get_theme_mod( 'body-bg' ) ); ?>;
+            }
+        </style>
+		<?php
+	}
+
+	add_action( 'wp_head', 'benawp_bg_color_customize_css' );
 }
