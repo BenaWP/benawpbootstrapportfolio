@@ -178,6 +178,7 @@ if ( ! function_exists( 'benawp_validate_length' ) ) {
 
 /**
  * 9. Customizer API
+ * Customizing the site backgrund-color
  *
  * @param object $wp_customize The Customize API object
  */
@@ -208,6 +209,7 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 
 /**
  * The function called whe we change the bacgroud color
+ * Hooked in wp_head to applying the style
  */
 if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
 	function benawp_bg_color_customize_css() {
