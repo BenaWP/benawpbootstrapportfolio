@@ -15,6 +15,7 @@ const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
 const COMPONENTS = THEME_URI . '/components';
 const DOMAIN     = 'benawpbootstrapportfolio';
+const BG = '#222222';
 
 
 /**
@@ -188,7 +189,7 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			'priority'    => 1,
 		) );
 		$wp_customize->add_setting( 'body-bg', array(
-			'default'   => '#222222',
+			'default'   => BG,
 			'transport' => 'refresh'
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
@@ -214,7 +215,7 @@ if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
         <style>
             html,
             body {
-                background: <?php esc_html_e( get_theme_mod( 'body-bg' ) ); ?>;
+                background: <?php esc_html_e( get_theme_mod( 'body-bg', BG ) ); ?>;
             }
         </style>
 		<?php
