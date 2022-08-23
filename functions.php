@@ -163,7 +163,7 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 /**
  * 7. Widgets
  */
-require_once THEME_ROOT . '/inc/widgets/benawp-recent-projects.php';
+require_once THEME_ROOT . '/classes/class-benawp-recent-projects.php';
 
 /**
  * 8. Validate forms
