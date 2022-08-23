@@ -10,12 +10,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h1>
-                    <!--						--><?php //esc_html_e( 'Hello, my name is Cory Simmons.', DOMAIN ); ?>
-					<?php esc_html_e( get_theme_mod( 'jumbotron-home-title', esc_html__( 'Hello, my name is Yvon Aulien Benahita.', DOMAIN ) ) ); ?>
+                    <?php esc_html_e( 'Thanks for getting in touch', DOMAIN ); ?>
                 </h1>
                 <p class="lead">
-                    <!--						--><?php //esc_html_e( 'I sell websites and website accessories.', DOMAIN ); ?>
-					<?php esc_html_e( get_theme_mod( 'jumbotron-home-subtitle', esc_html__( 'I\'m a WordPress Expert Developer.', DOMAIN ) ) ); ?>
+                    <?php esc_html_e( 'I can\'t wait to hear from you.', DOMAIN ); ?>
                 </p>
             </div> <!-- End col -->
         </div> <!-- End row -->

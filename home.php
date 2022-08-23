@@ -5,20 +5,8 @@
  */
 get_header();
 ?>
-    <div class="container-fluid text-center">
-        <div class="jumbotron">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <h1>
-						<?php esc_html_e( 'My thoughts on and off the web.', DOMAIN ); ?>
-                    </h1>
-                    <p class="lead">
-						<?php esc_html_e( 'Web-design, development, and parent-teacher conferences.', DOMAIN ); ?>
-                    </p>
-                </div> <!-- end col -->
-            </div> <!-- end row -->
-        </div> <!-- end jumbotron -->
-    </div> <!-- end container-fluid -->
+    <!--    Jumbotron-->
+    <?php get_template_part( 'template-parts/jumbotrons/jumbotron-home' ); ?>
 
     <div class="page-blog container-fluid">
         <div class="row">
