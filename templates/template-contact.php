@@ -62,7 +62,7 @@ get_header();
 ?>
 
 <!-- Jumbotron -->
-<?php get_template_part( 'template-parts/jumbotrons/jumbotron-contact' ); ?>
+<?php get_template_part( 'template-parts/jumbotron/jumbotron-contact' ); ?>
 
 <!-- Contact Form -->
 <div class="page-contact container-fluid">

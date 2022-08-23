@@ -6,7 +6,7 @@
 get_header();
 ?>
     <!--    Jumbotron-->
-    <?php get_template_part( 'template-parts/jumbotrons/jumbotron-home' ); ?>
+    <?php get_template_part( 'template-parts/jumbotron/jumbotron-home' ); ?>
 
     <div class="page-blog container-fluid">
         <div class="row">

@@ -8,7 +8,7 @@
 get_header();
 ?>
     <!--    Jumbotron -->
-    <?php get_template_part( 'template-parts/jumbotrons/jumbotron-front' ); ?>
+    <?php get_template_part( 'template-parts/jumbotron/jumbotron-front' ); ?>
 
     <!-- Filterable portfolio -->
     <div class="filterable-portfolio container-fluid">
