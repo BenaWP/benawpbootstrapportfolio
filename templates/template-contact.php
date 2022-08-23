@@ -44,7 +44,7 @@ if ( isset( $_POST['is-submitted'] ) ) {
 		$emailReceiver = get_option( 'admin_email' );
 
 		$emailSubject = sprintf( __( 'Vous avez été contacté par %s', DOMAIN ), $name );
-		$emailBody    = sprintf( __( 'Vous avez été contacté par %1$s. Son message est:', DOMAIN ), $name ) . PHP_EOL . PHP_EOL;
+		$emailBody    = template - contact . phpsprintf( __( 'Vous avez été contacté par %1$s. Son message est:', DOMAIN ), $name ) . PHP_EOL;
 		$emailBody    .= $message . PHP_EOL . PHP_EOL;
 		$emailBody    .= sprintf( __( 'Vous pouvez contacter %1$s par e-mail ici %2$s', DOMAIN ), $name, $email );
 		$emailBody    .= PHP_EOL . PHP_EOL;
