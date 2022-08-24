@@ -13,7 +13,7 @@ define( 'THEME_ROOT', get_template_directory() );
 const IMAGES     = THEME_URI . '/assets/img';
 const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
-const COMPONENTS = THEME_URI . '/components';
+const LIBS = THEME_URI . '/libs';
 const DOMAIN     = 'benawpbootstrapportfolio';
 const BG         = '#222222';
 
@@ -139,8 +139,8 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 	function benawp_scripts() {
 		// Register scripts
 		wp_register_script( 'modernizr-js', JS . '/vendor/modernizr-2.6.2.min.js', false, false, false );
-		wp_register_script( 'bootstrap-js', COMPONENTS . '/bower_components/bootstrap/dist/js/bootstrap.js', [ 'jquery' ], false, true );
-		wp_register_script( 'isotope-js', COMPONENTS . '/bower_components/isotope/dist/isotope.pkgd.min.js', false, false, true );
+		wp_register_script( 'bootstrap-js', LIBS . '/bower_components/bootstrap/dist/js/bootstrap.js', [ 'jquery' ], false, true );
+		wp_register_script( 'isotope-js', LIBS . '/bower_components/isotope/dist/isotope.pkgd.min.js', false, false, true );
 		wp_register_script( 'plugins-js', JS . '/plugins.js', false, false, true );
 		wp_register_script( 'main-js', JS . '/main.js', false, false, true );
 
@@ -153,7 +153,7 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 
 		// Load the stylesheets
 		wp_enqueue_style( 'fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' );
-		wp_enqueue_style( 'bootstrap-css', COMPONENTS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
+		wp_enqueue_style( 'bootstrap-css', LIBS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
 		wp_enqueue_style( 'style-css', CSS . '/style.css' );
 	}
 
