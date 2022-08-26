@@ -3,7 +3,7 @@
 /**
  * Adds Benawp_Phone_Number widget.
  */
-class Benawp_Phone_Number extends WP_Widget {
+class Benawp_Mail extends WP_Widget {
 
     /**
      * Register widget with WordPress.
@@ -11,12 +11,12 @@ class Benawp_Phone_Number extends WP_Widget {
     public function __construct() {
 
         parent::__construct( 
-            'benawp-phone-number', // Base ID
-            'Numéro de contact' // Name // what we can search in widget lists
+            'benawp-mail', // Base ID
+            'E-mail de contact' // Name // what we can search in widget lists
         );
 
         add_action( 'widgets_init', function() {
-            register_widget( 'Benawp_Phone_Number' );
+            register_widget( 'Benawp_Mail' );
         } );
         
     }
@@ -36,7 +36,7 @@ class Benawp_Phone_Number extends WP_Widget {
         if ( ! empty( $title ) ) {
             esc_html_e( $title );
         }else{
-            esc_attr_e( '+261 0xx xx xxx xx' ); // In case the user does not put anything
+            esc_attr_e( 'votre@email.com' ); // In case the user does not put anything
         }
     }
 
@@ -52,14 +52,14 @@ class Benawp_Phone_Number extends WP_Widget {
             $title = $instance[ 'title' ];
         }
         else {
-            $title = esc_html__( '+261 0xx xx xxx xx', DOMAIN ); // Place holder
+            $title = esc_html__( 'votre@email.com', DOMAIN ); // Place holder
         }
         ?>
         <p>
             <label 
                 for="<?php echo $this->get_field_name( 'title' ); ?>"
             >
-                <?php esc_html_e( 'N° de téléphone' ); ?> <!-- Label Title -->
+                <?php esc_html_e( 'Adresse e-mail' ); ?> <!-- Label Title -->
             </label>
             <input 
                 class="widefat" 
@@ -90,4 +90,4 @@ class Benawp_Phone_Number extends WP_Widget {
     }
 }
 
-new Benawp_Phone_Number();
+new Benawp_Mail();

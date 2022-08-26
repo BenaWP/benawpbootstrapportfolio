@@ -138,11 +138,8 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 			register_sidebar( array(
 				'name'          => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
 				'id'            => 'footer-wiget-mail',
-				'description'   => esc_html__( 'Entrer adresss électronique', DOMAIN ),
-				'before_wiget' => '<p>',
-                'after_widget' => '</p>',
+				'description'   => esc_html__( 'Entrer votre adresss électronique', DOMAIN ),
 				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
-				'after_sidebar'  => '',
 			) );
 		}
 	}
@@ -183,6 +180,7 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
  */
 require_once THEME_ROOT . '/classes/class-benawp-recent-projects.php';
 require_once THEME_ROOT . '/classes/class-benawp-phone-number.php';
+require_once THEME_ROOT . '/classes/class-benawp-mail.php';
 
 /**
  * 8. Validate forms
