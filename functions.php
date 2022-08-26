@@ -117,14 +117,35 @@ if ( ! function_exists( 'benawp_numbered_pagination' ) ) {
 if ( ! function_exists( 'benawp_widget_init' ) ) {
 	function benawp_widget_init() {
 		if ( function_exists( 'register_sidebar' ) ) {
+			// Main sidebar 
 			register_sidebar( array(
-				'name'          => __( 'Bare latérale de la page d\'accueil', DOMAIN ),
-				'id'            => 'main-sidebar',
-				'description'   => __( 'Apparaît dans les pages du blog', DOMAIN ),
+				'name'          => esc_html__( 'Bare latérale de la page Blog', DOMAIN ),
+				'id'            => 'blog-sidebar',
+				'description'   => esc_html__( 'Apparaît dans les pages du blog', DOMAIN ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div> <!-- end widget -->',
 				'before_title'  => '<h2>',
 				'after_title'   => '</h2>'
+			) );
+
+            // Footer infos
+			register_sidebar( array(
+				'name'          => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
+				'id'            => 'footer-wiget-tel',
+				'description'   => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
+                'before_wiget' => '<div class="col-md-12"><p>',
+                'after_widget' => '</p>',
+				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
+				'after_sidebar'  => '',
+			) );
+			register_sidebar( array(
+				'name'          => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
+				'id'            => 'footer-wiget-mail',
+				'description'   => esc_html__( 'Entrer adresss électronique', DOMAIN ),
+				'before_wiget' => '<p>',
+                'after_widget' => '</p>',
+				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
+				'after_sidebar'  => '',
 			) );
 		}
 	}
@@ -164,6 +185,7 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
  * 7. Widgets
  */
 require_once THEME_ROOT . '/classes/class-benawp-recent-projects.php';
+require_once THEME_ROOT . '/classes/class-benawp-phone-number.php';
 
 /**
  * 8. Validate forms
