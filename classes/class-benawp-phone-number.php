@@ -32,9 +32,11 @@ class Benawp_Phone_Number extends WP_Widget {
     public function widget( $args, $instance ) {
         extract( $args );
         $title = apply_filters( 'widget_title', $instance['title'] );
- 
+        
         if ( ! empty( $title ) ) {
             esc_html_e( $title );
+        }else{
+            esc_attr_e( '+261 0xx xx xxx xx' );
         }
     }
 
@@ -50,7 +52,7 @@ class Benawp_Phone_Number extends WP_Widget {
             $title = $instance[ 'title' ];
         }
         else {
-            $title = esc_html__( '+261 0XX XX XXX XX', DOMAIN ); // Place holder
+            $title = esc_html__( '+261 0xx xx xxx xx', DOMAIN ); // Place holder
         }
         ?>
         <p>

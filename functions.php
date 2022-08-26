@@ -133,10 +133,7 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 				'name'          => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
 				'id'            => 'footer-wiget-tel',
 				'description'   => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
-                'before_wiget' => '<div class="col-md-12"><p>',
-                'after_widget' => '</p>',
 				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
-				'after_sidebar'  => '',
 			) );
 			register_sidebar( array(
 				'name'          => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
