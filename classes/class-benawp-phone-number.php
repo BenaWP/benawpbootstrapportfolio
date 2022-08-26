@@ -36,7 +36,7 @@ class Benawp_Phone_Number extends WP_Widget {
         if ( ! empty( $title ) ) {
             esc_html_e( $title );
         }else{
-            esc_attr_e( '+261 0xx xx xxx xx' ); // In case the user does not put anything
+            esc_html_e( '+261 0xx xx xxx xx' ); // In case the user does not put anything
         }
     }
 
@@ -62,11 +62,11 @@ class Benawp_Phone_Number extends WP_Widget {
                 <?php esc_html_e( 'N° de téléphone' ); ?> <!-- Label Title -->
             </label>
             <input 
-                class="widefat" 
-                id="<?php echo $this->get_field_id( 'title' ); ?>" 
-                name="<?php echo $this->get_field_name( 'title' ); ?>" 
-                type="text" 
-                value="<?php echo esc_attr( $title ); ?>" 
+                class = "widefat" 
+                id    = "<?php echo $this->get_field_id( 'title' ); ?>" 
+                name  = "<?php echo $this->get_field_name( 'title' ); ?>" 
+                type  = "text" 
+                value = "<?php echo esc_attr( $title ); ?>" 
             />
          </p>
     <?php

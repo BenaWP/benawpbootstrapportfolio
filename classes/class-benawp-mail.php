@@ -36,7 +36,7 @@ class Benawp_Mail extends WP_Widget {
         if ( ! empty( $title ) ) {
             esc_html_e( $title );
         }else{
-            esc_attr_e( 'votre@email.com' ); // In case the user does not put anything
+            esc_html_e( 'votre@email.com', DOMAIN ); // In case the user does not put anything
         }
     }
 
@@ -62,11 +62,11 @@ class Benawp_Mail extends WP_Widget {
                 <?php esc_html_e( 'Adresse e-mail' ); ?> <!-- Label Title -->
             </label>
             <input 
-                class="widefat" 
-                id="<?php echo $this->get_field_id( 'title' ); ?>" 
-                name="<?php echo $this->get_field_name( 'title' ); ?>" 
-                type="text" 
-                value="<?php echo esc_attr( $title ); ?>" 
+                class = "widefat" 
+                id    = "<?php echo $this->get_field_id( 'title' ); ?>" 
+                name  = "<?php echo $this->get_field_name( 'title' ); ?>" 
+                type  = "text" 
+                value = "<?php echo esc_attr( $title ); ?>" 
             />
          </p>
     <?php

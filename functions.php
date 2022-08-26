@@ -130,15 +130,15 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 
             // Footer infos
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
-				'id'            => 'footer-wiget-tel',
-				'description'   => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
+				'name'           => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
+				'id'             => 'footer-wiget-tel',
+				'description'    => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
 				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
 			) );
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
-				'id'            => 'footer-wiget-mail',
-				'description'   => esc_html__( 'Entrer votre adresss électronique', DOMAIN ),
+				'name'           => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
+				'id'             => 'footer-wiget-mail',
+				'description'    => esc_html__( 'Entrer votre adresss électronique', DOMAIN ),
 				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
 			) );
 		}
