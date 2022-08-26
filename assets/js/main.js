@@ -6,7 +6,6 @@
         $('.portfolio-filter li').removeClass('active');
         $(this).closest('li').addClass('active');
         let filterValue = $(this).attr('data-filter');
-        console.log(filterValue);
         $container.isotope({filter: filterValue});
     });
 } )( jQuery );
