@@ -88,10 +88,18 @@ p {
     font-weight: 400;
 }
 
-.navbar .navbar-brand:hover,
 .navbar .navbar-nav>li>a:hover {
-    color: #4e9af3;
+    color: #F5F0E5;
+    text-decoration: underline;
     background: none;
+}
+
+.navbar .navbar-brand .bloginfo {
+    padding-bottom: 1em;
+}
+
+.navbar .navbar-brand .bloginfo:hover {
+    border-bottom: 2px solid #F5F0E5;
 }
 
 .navbar-nav>li:last-child>a:after {
@@ -141,8 +149,8 @@ p {
 
 .jumbotron {
     background: none;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 54px;
+    margin-bottom: 54px;
 }
 
 .jumbotron h1 {
@@ -193,17 +201,15 @@ p {
 }
 
 .filterable-portfolio .nav-pills {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-item {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-item img {
     border-radius: 4px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
 }
 
 .portfolio-item:hover img {
@@ -214,7 +220,7 @@ p {
 
 .filterable-portfolio,
 .single-post {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .posts {
@@ -227,8 +233,6 @@ p {
 
 .post img {
     border-radius: 4px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
     margin-bottom: 1rem;
 }
 
