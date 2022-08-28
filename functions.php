@@ -30,6 +30,9 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Add support for automatic feed links
 		add_theme_support( 'automatic-feed-links' );
 
+		// custom logo in your theme	
+		add_theme_support( 'custom-logo' );
+
 		// Add support for post thumbanails
 		add_theme_support( 'post-thumbnails' );
 
