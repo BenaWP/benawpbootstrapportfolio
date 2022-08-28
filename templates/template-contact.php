@@ -15,7 +15,11 @@ get_header();
 <?php get_template_part( 'template-parts/jumbotron/jumbotron-contact' ); ?>
 
 <!-- Contact Form -->
-<?php echo do_shortcode( '[wpforms id="222" title="false"]' ); ?>
+<div id="contact-form-wprap" class="contact-form-wrap container-fluid">
+	<div class="row">
+		<?php echo do_shortcode( '[wpforms id="222" title="false"]' ); ?>
+	</div>
+</div>
 
 <?php
 /* Load footer.php */
