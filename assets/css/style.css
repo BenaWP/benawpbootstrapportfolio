@@ -3,7 +3,7 @@
 @import url("http://fonts.googleapis.com/css?family=Abril+Fatface");
 
 .navbar .navbar-brand,
-.navbar .navbar-nav > li > a,
+.navbar .navbar-nav>li>a,
 .filterable-portfolio .nav-pills a,
 .portfolio-item img,
 .posts .post img,
@@ -49,24 +49,24 @@ p {
 }
 
 .navbar .navbar-brand,
-.navbar .navbar-nav > li > a {
+.navbar .navbar-nav>li>a {
     color: #f5f5f5;
     font-weight: bold;
 }
 
 .navbar .navbar-brand:hover,
-.navbar .navbar-nav > li > a:hover {
+.navbar .navbar-nav>li>a:hover {
     color: #4e9af3;
     background: none;
 }
 
-.navbar-nav > li > a:after {
+.navbar-nav>li>a:after {
     content: '/';
     margin-left: 30px;
     color: #f5f5f5;
 }
 
-.navbar-nav > li:last-child > a:after {
+.navbar-nav>li:last-child>a:after {
     content: '';
 }
 
@@ -79,7 +79,7 @@ p {
 }
 
 @media (max-width: 768px) {
-    .navbar-nav > li > a {
+    .navbar-nav>li>a {
         background: #111;
         border-radius: 4px;
         margin-bottom: 3px;
@@ -87,7 +87,7 @@ p {
 }
 
 @media (max-width: 768px) {
-    .navbar-nav > li > a:after {
+    .navbar-nav>li>a:after {
         content: '';
     }
 }
@@ -133,9 +133,9 @@ p {
     font-weight: bold;
 }
 
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
     background: #111;
     color: #f5f5f5;
 }
@@ -144,7 +144,8 @@ p {
     color: #f5f5f5;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
+.nav>li>a:hover,
+.nav>li>a:focus {
     background: none;
     color: #4e9af3;
 }
@@ -246,7 +247,7 @@ p {
     border-bottom: 1px dotted #838383;
 }
 
-.widget_benawp-recent-projects ul{
+.widget_benawp-recent-projects ul {
     padding: 15px 0;
 }
 
@@ -293,6 +294,7 @@ a {
 
 /* Contact form */
 /* For the demo purpose*/
+
 #contact-form-wprap {
     width: 50%;
     max-width: 50%;
@@ -314,7 +316,7 @@ a {
     max-width: 100%;
 }
 
-#contact-form-wprap label{
+#contact-form-wprap label {
     color: #f5f5f5;
     display: inline-block;
     max-width: 100%;
@@ -351,4 +353,23 @@ a {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+
+@media (max-width: 991px) {
+
+    #contact-form-wprap {
+        width: 100%;
+        max-width: 100%;
+        background: #111;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 4px;
+        margin-bottom: 3rem;
+    }
+
+    #contact-form-wprap .row {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
 }
