@@ -17,7 +17,7 @@ get_header();
             <div class="col-md-12">
                 <ul class="nav nav-pills portfolio-filter">
                     <li class="portfolio-title">
-						<?php esc_html_e( 'Filtres: ', DOMAIN ); ?>
+						<?php esc_html_e( 'Mes projets: ', DOMAIN ); ?>
                     </li>
                     <li role="presentation" class="active">
                         <a href="#" data-filter="*"><?php esc_html_e( 'Tous', DOMAIN ); ?></a>
