@@ -54,7 +54,7 @@ if ( ! function_exists( 'benawp_new_excerpt_more' ) ) {
 	function benawp_new_excerpt_more( $more ) {
 		global $post;
 
-		$new_read_more = '...<a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( ' Continuez à lire', DOMAIN ) . '</a>';
+		$new_read_more = '... <a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( 'Continuez à lire', DOMAIN ) . '</a>';
 
 		return $new_read_more;
 	}
@@ -72,7 +72,7 @@ if ( ! function_exists( 'benawp_post_meta' ) ) {
 			// Post author
 			echo '<span class="post-author">';
 			echo '<i class="fa-solid fa-user"></i>';
-			printf( '<a href="%1$s" rel="author"> %2$s </a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
+			printf( '<a href="%1$s" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 			echo '</span>'; // <!-- post-author >
 
 			// Post date
