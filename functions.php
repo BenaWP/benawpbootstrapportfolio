@@ -15,7 +15,7 @@ const CSS        = THEME_URI . '/assets/css';
 const JS         = THEME_URI . '/assets/js';
 const LIBS = THEME_URI . '/libs';
 const DOMAIN     = 'benawpbootstrapportfolio';
-const BG         = '#222222';
+const BG         = '#424cbf';
 
 
 /**
