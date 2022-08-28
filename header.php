@@ -47,9 +47,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
-				<?php bloginfo( 'name' ); ?>
-            </a>
+
+            <!-- Logo -->
+            <?php
+                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                $logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+            ?>
+            <?php if ( has_custom_logo() ) : ?>
+                <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
+                    <?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
+                </a>
+            <?php else : ?>
+                <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+            <?php endif; ?>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
