@@ -306,8 +306,8 @@ a {
 }
 
 #contact-form-wprap .row {
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 #contact-form-wprap textarea,
@@ -360,11 +360,6 @@ a {
     #contact-form-wprap {
         width: 100%;
         max-width: 100%;
-        background: #111;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border-radius: 4px;
-        margin-bottom: 3rem;
     }
 
     #contact-form-wprap .row {
