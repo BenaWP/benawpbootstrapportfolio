@@ -36,6 +36,8 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Add support for post thumbanails
 		add_theme_support( 'post-thumbnails' );
 
+		add_theme_support('customize-selective-refresh-widgets');
+
 		// Register nav menus
 		register_nav_menus(
 			array(
