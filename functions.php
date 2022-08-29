@@ -10,12 +10,12 @@
  */
 define( 'THEME_URI', get_stylesheet_directory_uri() );
 define( 'THEME_ROOT', get_template_directory() );
-const IMAGES     = THEME_URI . '/assets/img';
-const CSS        = THEME_URI . '/assets/css';
-const JS         = THEME_URI . '/assets/js';
-const LIBS = THEME_URI . '/libs';
-const DOMAIN     = 'benawpbootstrapportfolio';
-const BG         = '#424cbf';
+const IMAGES = THEME_URI . '/assets/img';
+const CSS    = THEME_URI . '/assets/css';
+const JS     = THEME_URI . '/assets/js';
+const LIBS   = THEME_URI . '/libs';
+const DOMAIN = 'benawpbootstrapportfolio';
+const BG     = '#424cbf';
 
 
 /**
@@ -36,7 +36,8 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Add support for post thumbanails
 		add_theme_support( 'post-thumbnails' );
 
-		add_theme_support('customize-selective-refresh-widgets');
+		// Implementing Selective Refresh Support for Widgets
+		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Register nav menus
 		register_nav_menus(
@@ -133,18 +134,22 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 				'after_title'   => '</h2>'
 			) );
 
-            // Footer infos
+			// Footer infos
 			register_sidebar( array(
 				'name'           => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
 				'id'             => 'footer-wiget-tel',
 				'description'    => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
-				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
+//				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
+				'before_widget'  => '<p><span class="glyphicon glyphicon-phone" aria-hidden="true"><span class="phone-number">',
+				'after_widget'   => '</span></span></p>'
 			) );
 			register_sidebar( array(
 				'name'           => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
 				'id'             => 'footer-wiget-mail',
 				'description'    => esc_html__( 'Entrer votre adresss électronique', DOMAIN ),
-				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
+//				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
+				'before_widget'  => '<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"> <span class="email-address">',
+				'after_widget'   => '</span></span></p>'
 			) );
 		}
 	}
@@ -273,7 +278,7 @@ if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
 	function benawp_bg_color_customize_css() {
 		?>
         <style>
-            html{
+            html {
                 background-color: <?php esc_html_e( get_theme_mod( 'body-bg', BG ) ); ?>;
             }
         </style>

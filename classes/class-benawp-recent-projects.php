@@ -19,8 +19,8 @@ class Benawp_Recent_Projects extends WP_Widget {
 			'benawp-recent-projects', // Base ID
 			__( 'BenaWP Projets récent', DOMAIN ), // Name
 			array(
-				'class'       => 'benawp-recent-projects',
-				'description' => __( 'Un widget personnalisé qui affiche les vignettes des qautre projets les plus récents.', DOMAIN ),
+				'class'                       => 'benawp-recent-projects',
+				'description'                 => __( 'Un widget personnalisé qui affiche les vignettes des qautre projets les plus récents.', DOMAIN ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -106,9 +106,9 @@ class Benawp_Recent_Projects extends WP_Widget {
             <input
                     type="text"
                     class="widefat"
-                    id="<?php echo $this->get_field_id( 'title' );  ?>"
+                    id="<?php echo $this->get_field_id( 'title' ); ?>"
                     name="<?php echo $this->get_field_name( 'title' ); ?>"
-                    value="<?php echo esc_attr( $instance['title'] );  ?>"
+                    value="<?php echo esc_attr( $instance['title'] ); ?>"
             >
         </p>
 		<?php
