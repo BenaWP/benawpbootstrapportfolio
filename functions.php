@@ -139,7 +139,6 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 				'name'           => esc_html__( 'Footer | Numéro de téléphone', DOMAIN ),
 				'id'             => 'footer-wiget-tel',
 				'description'    => esc_html__( 'Entrer votre numéro de téléphone', DOMAIN ),
-//				'before_sidebar' => '<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>',
 				'before_widget'  => '<p><span class="glyphicon glyphicon-phone" aria-hidden="true"><span class="phone-number">',
 				'after_widget'   => '</span></span></p>'
 			) );
@@ -147,7 +146,6 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 				'name'           => esc_html__( 'Footer | Adresse e-mail', DOMAIN ),
 				'id'             => 'footer-wiget-mail',
 				'description'    => esc_html__( 'Entrer votre adresss électronique', DOMAIN ),
-//				'before_sidebar' => '<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>',
 				'before_widget'  => '<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"> <span class="email-address">',
 				'after_widget'   => '</span></span></p>'
 			) );
