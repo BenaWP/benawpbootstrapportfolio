@@ -1,2 +1,2 @@
 # benawpbootstrapportfolio
-BenaWP Portfolio for a freelancer
+A wordpress Portfolio Theme for a freelancer
