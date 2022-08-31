@@ -300,21 +300,27 @@ function benawp_register_required_plugins() {
 
 	$plugins = array(
 		array(
-			'name'               => 'WPForms Lite',  // The plugin name.
-			'slug'               => 'wpforms-lite',  // The plugin slug (typically the folder name).
-			'source'             => get_stylesheet_directory_uri() . '/inc/plugins/wpforms-lite.1.7.6.zip',  // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '',    // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '',    // If set, this callable will be checked for availability to determine if a plugin is active.
+			'name'               => 'WPForms Lite',
+			// The plugin name.
+			'slug'               => 'wpforms-lite',
+			// The plugin slug (typically the folder name).
+			'source'             => get_stylesheet_directory_uri() . '/inc/plugins/wpforms-lite.1.7.6.zip',
+			// The plugin source.
+			'required'           => true,
+			// If false, the plugin is only 'recommended' instead of required.
+			'version'            => '',
+			// E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false,
+			// If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false,
+			// If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '',
+			// If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '',
+			// If set, this callable will be checked for availability to determine if a plugin is active.
 
 		),
 	);
-
-	// Change this to your theme text domain, used for internationalising strings
-	$theme_text_domain = 'tensixtwentytwentytwo';
 
 	/**
 	 * Array of configuration settings. Amend each line as needed.
@@ -324,7 +330,7 @@ function benawp_register_required_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'           => $theme_text_domain, // Text domain - likely want to be the same as your theme.
+		'domain'           => DOMAIN, // Text domain - likely want to be the same as your theme.
 		'default_path'     => '', // Default absolute path to pre-packaged plugins
 		'parent_menu_slug' => 'themes.php', // Default parent menu slug
 		'parent_url_slug'  => 'themes.php', // Default parent URL slug
@@ -333,32 +339,32 @@ function benawp_register_required_plugins() {
 		'is_automatic'     => false, // Automatically activate plugins after installation or not
 		'message'          => '', // Message to output right before the plugins table
 		'strings'          => array(
-			'page_title'                      => __( 'Installer les plugins requis', $theme_text_domain ),
-			'menu_title'                      => __( 'Installer les plugins', $theme_text_domain ),
-			'installing'                      => __( 'Installation du plugin: %s', $theme_text_domain ),
+			'page_title'                      => __( 'Installer les plugins requis', DOMAIN ),
+			'menu_title'                      => __( 'Installer les plugins', DOMAIN ),
+			'installing'                      => __( 'Installation du plugin: %s', DOMAIN ),
 			// %1$s = plugin name
-			'oops'                            => __( 'Something went wrong with the plugin API.', $theme_text_domain ),
+			'oops'                            => __( 'Quelque chose s\'est mal passé avec l\'API du plugin.', DOMAIN ),
 			'notice_can_install_required'     => _n_noop( 'Ce thème exige le plugin suivant: %1$s.', 'Ce thème exige les plugin suivants: %1$s.' ),
 			// %1$s = plugin name(s)
 			'notice_can_install_recommended'  => _n_noop( 'Ce thème sera beaucoup plus mieux avec le plugin suivant: %1$s.', 'Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s.' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
+			'notice_cannot_install'           => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour installer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer les plugins.' ),
 			// %1$s = plugin name(s)
-			'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ),
+			'notice_can_activate_required'    => _n_noop( 'Le plugin requis suivant est actuellement inactif : %1$s.', 'Les plugins requis suivants sont actuellement inactifs : %1$s.' ),
 			// %1$s = plugin name(s)
 			'notice_can_activate_recommended' => _n_noop( 'Le plugin recommandé suivant est actuellement inactif: %1$s.', 'Les plugins recommandé suivant est actuellement inactif: %1$s.' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ),
+			'notice_cannot_activate'          => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour activer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer les plugins.' ),
 			// %1$s = plugin name(s)
-			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ),
+			'notice_ask_to_update'            => _n_noop( 'Le plugin suivant doit être mis à jour à sa dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.', 'Les plugins suivants doivent être mis à jour à leur dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
+			'notice_cannot_update'            => _n_noop( 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour les plugins.' ),
 			// %1$s = plugin name(s)
 			'install_link'                    => _n_noop( 'Commencez à installer le plugin', 'Commencez à installer les plugins' ),
-			'activate_link'                   => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-			'return'                          => __( 'Retour à l\'installation des plugins requis', $theme_text_domain ),
-			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', $theme_text_domain ),
-			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', $theme_text_domain ),
+			'activate_link'                   => _n_noop( 'Activez le plugin installé', 'Activer les plugins installés' ),
+			'return'                          => __( 'Retour à l\'installation des plugins requis', DOMAIN ),
+			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', DOMAIN ),
+			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', DOMAIN ),
 			// %1$s = dashboard link
 			'nag_type'                        => 'updated'
 			// Determines admin notice type - can only be 'updated' or 'error'
