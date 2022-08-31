@@ -330,14 +330,26 @@ function benawp_register_required_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'           => DOMAIN, // Text domain - likely want to be the same as your theme.
-		'default_path'     => '', // Default absolute path to pre-packaged plugins
-		'parent_menu_slug' => 'themes.php', // Default parent menu slug
-		'parent_url_slug'  => 'themes.php', // Default parent URL slug
-		'menu'             => 'install-required-plugins', // Menu slug
-		'has_notices'      => true, // Show admin notices or not
-		'is_automatic'     => false, // Automatically activate plugins after installation or not
-		'message'          => '', // Message to output right before the plugins table
+		'domain'           => DOMAIN,
+		// Text domain - likely want to be the same as your theme.
+		'default_path'     => '',
+		// Default absolute path to pre-packaged plugins
+		'parent_menu_slug' => 'themes.php',
+		// Default parent menu slug
+		'parent_url_slug'  => 'themes.php',
+		// Default parent URL slug
+		'menu'             => 'install-required-plugins',
+		// Menu slug
+		'has_notices'      => true,
+		// Show admin notices or not
+		'dismissable'      => false,
+		// If false, a user cannot dismiss the nag message.
+		'dismiss_msg'      => '',
+		// If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic'     => false,
+		// Automatically activate plugins after installation or not
+		'message'          => '',
+		// Message to output right before the plugins table
 		'strings'          => array(
 			'page_title'                      => __( 'Installer les plugins requis', DOMAIN ),
 			'menu_title'                      => __( 'Installer les plugins', DOMAIN ),
