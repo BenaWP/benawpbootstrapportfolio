@@ -378,7 +378,7 @@ function benawp_register_required_plugins() {
 			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', DOMAIN ),
 			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', DOMAIN ),
 			// %1$s = dashboard link
-			'nag_type'                        => 'updated'
+			'nag_type'                        => 'notice-warning'
 			// Determines admin notice type - can only be 'updated' or 'error'
 		)
 	);
