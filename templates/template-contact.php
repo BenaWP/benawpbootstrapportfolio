@@ -30,7 +30,7 @@ get_header();
 				}else {
 					esc_html_e( 'Oups, pas de formulaire.', DOMAIN );
 					echo '<br>';
-					esc_html_e( 'IMPORTANT : Le titre du formulaire doit contenir le mot clé "contact".', DOMAIN );
+					esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', DOMAIN );
 				}
 			?>
 
@@ -40,7 +40,7 @@ get_header();
 			<?php 
 				esc_html_e( 'Veuillez installer puis activer le plugin WP Forms, c\'est obligatoire pour cet thème. Merci.', DOMAIN );
 				echo '<br>';
-				esc_html_e( 'IMPORTANT : Le titre du formulaire doit contenir le mot clé "contact".', DOMAIN );
+				esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', DOMAIN );
 			?>
 		<?php endif; ?>
 	</div>
