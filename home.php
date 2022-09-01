@@ -9,7 +9,7 @@ get_header();
     <?php get_template_part( 'template-parts/jumbotron/jumbotron-home' ); ?>
 
     <div class="page-blog container-fluid">
-        <div class="row">
+        <div class="row blog-home-container">
             <aside class="sidebar col-md-3 col-md-offset-1 col-md-push-8">
 				<?php get_sidebar(); ?> <!-- Load sidebar.php -->
             </aside>

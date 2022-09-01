@@ -474,3 +474,10 @@ a {
     display: flex;
     gap: 0.5rem;
 }
+
+@media( max-width: 991px ) {
+    .blog-home-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
