@@ -10,12 +10,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h1>
-                    <!--						--><?php //esc_html_e( 'Hello, my name is Cory Simmons.', DOMAIN ); ?>
-					<?php esc_html_e( get_theme_mod( 'jumbotron-front-title', esc_html__( 'Hello, your name is Replace With Yours.', DOMAIN ) ) ); ?>
+					<?php esc_html_e( get_theme_mod( 'jumbotron-front-title', esc_html__( 'Hello, mon nom est remplacer par le votre.', DOMAIN ) ) ); ?>
                 </h1>
                 <p class="lead">
-                    <!--						--><?php //esc_html_e( 'I sell websites and website accessories.', DOMAIN ); ?>
-					<?php esc_html_e( get_theme_mod( 'jumbotron-front-subtitle', esc_html__( 'Then tel us about your job.', DOMAIN ) ) ); ?>
+					<?php esc_html_e( get_theme_mod( 'jumbotron-front-subtitle', esc_html__( 'Ensuite dis nous ce que vous faites.', DOMAIN ) ) ); ?>
                 </p>
             </div> <!-- End col -->
         </div> <!-- End row -->
