@@ -83,6 +83,12 @@ p {
     font-weight: bold;
 }
 
+@media ( max-width: 767px ) {
+    .navbar .navbar-nav > li > a {
+        color: #111;
+    }
+}
+
 .navbar .navbar-nav > li > a {
     font-size: 1.2em;
     font-weight: 400;
@@ -457,11 +463,6 @@ a {
     .navbar-header {
         padding-bottom: 10px;
     }
-
-    .navbar .navbar-nav > li > a {
-        font-size: inherit;
-        color: #F5F5F5;
-    }
 }
 
 .site-footer .contact-infos .phone-number,
@@ -475,8 +476,8 @@ a {
     gap: 0.5rem;
 }
 
-@media( max-width: 991px ) {
-    .blog-home-container{
+@media ( max-width: 991px ) {
+    .blog-home-container {
         display: flex;
         flex-direction: column-reverse;
     }
