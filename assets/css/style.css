@@ -91,6 +91,7 @@ p {
 
 .navbar .navbar-nav > li > a {
     font-size: 1em;
+    padding: 10px 25px;
     font-weight: 400;
 }
 
@@ -115,9 +116,20 @@ p {
 }
 
 @media ( min-width: 768px ) {
-    .navbar-nav > li.current-menu-item {
+    .navbar-nav > li.contact-menu-item {
         background-color: #3858e9;
         border-radius: .2rem;
+    }
+
+    .navbar-nav > li.current-menu-item a::before{
+        display: inline-block;
+        content: '';
+        -webkit-border-radius: 0.375rem;
+        border-radius: 0.375rem;
+        height: 0.75rem;
+        width: 0.75rem;
+        margin-right: 0.5rem;
+        background-color: #f5f2f0;
     }
 }
 
