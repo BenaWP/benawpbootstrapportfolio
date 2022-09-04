@@ -272,11 +272,11 @@ msgid "Rien n'a été trouvé !"
 msgstr ""
 
 #: template-parts/jumbotron/jumbotron-contact.php:13
-msgid "Merci de nous contacter"
+msgid "Merci de me contacter"
 msgstr ""
 
 #: template-parts/jumbotron/jumbotron-contact.php:16
-msgid "J'ai hâte d'avoir de vos nouvelles."
+msgid "J'ai hâte d'avoir vos nouvelles."
 msgstr ""
 
 #: template-parts/jumbotron/jumbotron-front.php:13
@@ -288,11 +288,11 @@ msgid "Ensuite dis nous ce que vous faites."
 msgstr ""
 
 #: template-parts/jumbotron/jumbotron-home.php:13
-msgid "Lorem ipsum dolor sit amet"
+msgid "Moi & l'univers WordPress"
 msgstr ""
 
 #: template-parts/jumbotron/jumbotron-home.php:16
-msgid "Uisque hendrerit, nunc eu molestie vulputate, leo diam dictum orci."
+msgid "Dev. Plugins, Dev. Thèmes & Sites Web."
 msgstr ""
 
 #: templates/template-contact.php:31
