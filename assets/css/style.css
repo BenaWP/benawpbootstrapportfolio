@@ -109,6 +109,18 @@ p {
     background-color: transparent;
 }
 
+.nav > li > a:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+@media ( min-width: 768px ) {
+    .navbar-nav > li.current-menu-item {
+        background-color: #3858e9;
+        border-radius: .2rem;
+    }
+}
+
 .navbar .navbar-brand .bloginfo {
     padding-bottom: 1em;
 }
