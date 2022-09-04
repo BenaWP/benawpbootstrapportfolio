@@ -56,7 +56,7 @@ if ( ! function_exists( 'benawp_new_excerpt_more' ) ) {
 	function benawp_new_excerpt_more( $more ) {
 		global $post;
 
-		$new_read_more = '... <a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( 'Continuez à lire', 'benawpbootstrapportfolio' ) . '</a>';
+		$new_read_more = '... <br><br> <a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( 'Continuez à lire', 'benawpbootstrapportfolio' ) . '</a>';
 
 		return $new_read_more;
 	}
