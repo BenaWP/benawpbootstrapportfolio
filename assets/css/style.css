@@ -230,6 +230,11 @@ p {
     margin-bottom: 2rem;
 }
 
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .portfolio-item {
     margin-bottom: 2rem;
 }
