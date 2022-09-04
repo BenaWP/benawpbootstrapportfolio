@@ -28,9 +28,9 @@ get_header();
 				if ( strcasecmp( $form_title, 'contact ' ) ) {
 					$form_id =  $form_infos[$action_scheduler_hybrid_store_demarkation]['form_id'];
 				}else {
-					esc_html_e( 'Oups, pas de formulaire.', DOMAIN );
+					esc_html_e( 'Oups, pas de formulaire.', 'benawpbootstrapportfolio' );
 					echo '<br>';
-					esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', DOMAIN );
+					esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', 'benawpbootstrapportfolio' );
 				}
 			?>
 
@@ -38,9 +38,9 @@ get_header();
 
 		<?php else: ?>	
 			<?php 
-				esc_html_e( 'Veuillez installer puis activer le plugin WP Forms, c\'est obligatoire pour cet thème. Merci.', DOMAIN );
+				esc_html_e( 'Veuillez installer puis activer le plugin WP Forms, c\'est obligatoire pour cet thème. Merci.', 'benawpbootstrapportfolio' );
 				echo '<br>';
-				esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', DOMAIN );
+				esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', 'benawpbootstrapportfolio' );
 			?>
 		<?php endif; ?>
 	</div>

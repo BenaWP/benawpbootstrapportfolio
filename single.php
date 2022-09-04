@@ -16,7 +16,7 @@ get_header();
 <?php endwhile; ?>
 
 <?php else: ?>
-    <?php esc_html_e( 'Oups, il semble qu\'il n\'y ait rien ici' , DOMAIN ); ?>
+    <?php esc_html_e( 'Oups, il semble qu\'il n\'y ait rien ici' , 'benawpbootstrapportfolio' ); ?>
 <?php endif; ?>
 
 <?php

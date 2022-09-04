@@ -12,9 +12,9 @@ class Benawp_Phone_Number extends WP_Widget {
 
 		parent::__construct(
 			'benawp-phone-number', // Base ID
-			__( 'Numéro de contact', DOMAIN ), // Name // what we can search in widget lists
+			__( 'Numéro de contact', 'benawpbootstrapportfolio' ), // Name // what we can search in widget lists
 			array(
-				'description'                 => __( 'Ajouter votre numméro de contact', DOMAIN ),
+				'description'                 => __( 'Ajouter votre numméro de contact', 'benawpbootstrapportfolio' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -59,7 +59,7 @@ class Benawp_Phone_Number extends WP_Widget {
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
 		} else {
-			$title = esc_html__( '+261 0xx xx xxx xx', DOMAIN ); // Place holder
+			$title = esc_html__( '+261 0xx xx xxx xx', 'benawpbootstrapportfolio' ); // Place holder
 		}
 		?>
         <p>

@@ -17,10 +17,10 @@ get_header();
             <div class="col-md-12">
                 <ul class="nav nav-pills portfolio-filter">
                     <li class="portfolio-title">
-						<?php esc_html_e( 'Mes projets: ', DOMAIN ); ?>
+						<?php esc_html_e( 'Mes projets: ', 'benawpbootstrapportfolio' ); ?>
                     </li>
                     <li role="presentation" class="active">
-                        <a href="#" data-filter="*"><?php esc_html_e( 'Tous', DOMAIN ); ?></a>
+                        <a href="#" data-filter="*"><?php esc_html_e( 'Tous', 'benawpbootstrapportfolio' ); ?></a>
                     </li>
 					<?php
 					$args       = array(

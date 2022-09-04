@@ -10,10 +10,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h1>
-					<?php esc_html_e( 'Lorem ipsum dolor sit amet', DOMAIN ); ?>
+					<?php esc_html_e( 'Lorem ipsum dolor sit amet', 'benawpbootstrapportfolio' ); ?>
                 </h1>
                 <p class="lead">
-                    <?php esc_html_e( 'Uisque hendrerit, nunc eu molestie vulputate, leo diam dictum orci.', DOMAIN ); ?>
+                    <?php esc_html_e( 'Uisque hendrerit, nunc eu molestie vulputate, leo diam dictum orci.', 'benawpbootstrapportfolio' ); ?>
                 </p>
             </div> <!-- End col -->
         </div> <!-- End row -->
