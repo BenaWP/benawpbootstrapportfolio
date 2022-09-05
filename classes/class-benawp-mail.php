@@ -66,7 +66,7 @@ class Benawp_Mail extends WP_Widget {
             <label
                     for="<?php echo $this->get_field_name( 'title' ); ?>"
             >
-				<?php esc_html_e( 'Adresse e-mail' ); ?> <!-- Label Title -->
+				<?php esc_html_e( 'Adresse e-mail', 'benawpbootstrapportfolio' ); ?> <!-- Label Title -->
             </label>
             <input
                     class = "widefat"
