@@ -23,10 +23,10 @@ const BG     = '#424cbf';
 if ( ! function_exists( 'benawp_theme_setup' ) ) {
 	function benawp_theme_setup() {
 		// Make the theme available for translation
-        $lang_dir = THEME_ROOT . '/languages';
+		$lang_dir = THEME_ROOT . '/languages';
 		load_theme_textdomain( 'benawpbootstrapportfolio', $lang_dir );
 
-        // Enables plugins and themes to manage the document title tag.
+		// Enables plugins and themes to manage the document title tag.
 		add_theme_support( "title-tag" );
 
 		// Add support for automatic feed links
@@ -177,7 +177,7 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 		wp_enqueue_script( 'main-js' );
 
 		// Load the stylesheets
-		wp_enqueue_style( 'fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' );
+		wp_enqueue_style( 'fontawesome-css', LIBS . '/fontawesome/css/all.min.css', false, '6.2.0' );
 		wp_enqueue_style( 'bootstrap-css', LIBS . '/bower_components/bootstrap/dist/css/bootstrap.css' );
 		wp_enqueue_style( 'style-css', CSS . '/style.css' );
 	}
@@ -375,7 +375,7 @@ function benawp_register_required_plugins() {
 			'notice_cannot_update'            => _n_noop( 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour les plugins.', 'benawpbootstrapportfolio' ),
 			// %1$s = plugin name(s)
 			'install_link'                    => _n_noop( 'Commencez à installer le plugin', 'Commencez à installer les plugins', 'benawpbootstrapportfolio' ),
-			'activate_link'                   => _n_noop( 'Activez le plugin installé', 'Activer les plugins installés' , 'benawpbootstrapportfolio'),
+			'activate_link'                   => _n_noop( 'Activez le plugin installé', 'Activer les plugins installés', 'benawpbootstrapportfolio' ),
 			'return'                          => __( 'Retour à l\'installation des plugins requis', 'benawpbootstrapportfolio' ),
 			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', 'benawpbootstrapportfolio' ),
 			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', 'benawpbootstrapportfolio' ),
