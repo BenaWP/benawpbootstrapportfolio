@@ -9,7 +9,7 @@ A simple bootstrap theme for a freelancer 2022.
 
 == Description ==
 
-BenaWP Bootstrap Portfolio est un thème basé sur Bootstrap pour les petites entreprises, et surtout pour un freelancer. Un style de conception moderne et totalement responsive fonctionne à l’unisson avec des fonctionnalités riches et des plugins faisant de ce thème un excellent thème WordPress pour vous !
+BenaWP Bootstrap Portfolio est un thème WordPress basé sur Bootstrap pour les petites entreprises, et surtout pour un freelancer. Un style de conception moderne et totalement responsive fonctionne à l’unisson avec des fonctionnalités riches et des plugins faisant de ce thème un excellent thème WordPress pour vous !
 
 == Fonctionnalités ==
 - Formulaire de contact fonctionnnel avec WP Forms.
