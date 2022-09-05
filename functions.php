@@ -220,8 +220,8 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			'priority'    => 50,
 		) );
 		$wp_customize->add_setting( 'body-bg', array(
-			'default'   => BG,
-			'transport' => 'refresh',
+			'default'           => BG,
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'esc_html',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
@@ -241,13 +241,13 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			'priority'    => 100,
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-title', array(
-			'default'   => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawpbootstrapportfolio' ),
-			'transport' => 'refresh',
-            'sanitize_callback' => 'esc_html__',
+			'default'           => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawpbootstrapportfolio' ),
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'esc_html__',
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-subtitle', array(
-			'default'   => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawpbootstrapportfolio' ),
-			'transport' => 'refresh',
+			'default'           => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawpbootstrapportfolio' ),
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'esc_html__',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control(
@@ -305,12 +305,10 @@ function benawp_register_required_plugins() {
 
 	$plugins = array(
 		array(
-			'name'               => 'WPForms Lite',
-			// The plugin name.
+			'name'               => 'Contact Form by WPForms – Drag & Drop Form Builder for WordPress',
+			// The plugin name on wordpress.org.
 			'slug'               => 'wpforms-lite',
-			// The plugin slug (typically the folder name).
-			'source'             => get_stylesheet_directory_uri() . '/inc/plugins/wpforms-lite.1.7.6.zip',
-			// The plugin source.
+			// Plugin slug on wordpress.org
 			'required'           => true,
 			// If false, the plugin is only 'recommended' instead of required.
 			'version'            => '',
