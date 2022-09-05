@@ -509,6 +509,13 @@ a {
     gap: 0.5rem;
 }
 
+@media ( max-width: 767px ){
+    .site-footer > .row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 @media ( max-width: 991px ) {
     .blog-home-container {
         display: flex;
