@@ -99,7 +99,7 @@ class Benawp_Recent_Projects extends WP_Widget {
 		?>
         <p>
             <label
-                    for="<?php esc_html_e( $this->get_field_id( 'title' ) ); ?>">
+                    for="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>">
 				<?php esc_html_e( 'Titre: ', 'benawpbootstrapportfolio' ); ?>
             </label>
 
