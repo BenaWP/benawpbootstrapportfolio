@@ -42,7 +42,7 @@ class Benawp_Phone_Number extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			esc_html_e( $title );
 		} else {
-			esc_html_e( '+261 0xx xx xxx xx' ); // In case the user does not put anything
+			esc_html_e( '+261 0xx xx xxx xx', 'benawpbootstrapportfolio' ); // In case the user does not put anything
 		}
 		echo $after_widget;
 	}
@@ -66,7 +66,7 @@ class Benawp_Phone_Number extends WP_Widget {
             <label
                     for="<?php echo $this->get_field_name( 'title' ); ?>"
             >
-				<?php esc_html_e( 'N° de téléphone' ); ?> <!-- Label Title -->
+				<?php esc_html_e( 'N° de téléphone', 'benawpbootstrapportfolio' ); ?> <!-- Label Title -->
             </label>
             <input
                     class="widefat"
