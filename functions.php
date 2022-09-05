@@ -26,6 +26,9 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
         $lang_dir = THEME_ROOT . '/languages';
 		load_theme_textdomain( 'benawpbootstrapportfolio', $lang_dir );
 
+        // Enables plugins and themes to manage the document title tag.
+		add_theme_support( "title-tag" );
+
 		// Add support for automatic feed links
 		add_theme_support( 'automatic-feed-links' );
 
