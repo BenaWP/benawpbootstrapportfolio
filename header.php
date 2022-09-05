@@ -30,6 +30,9 @@
 
 </head>
 <body <?php body_class(); ?> >
+
+<?php wp_body_open(); ?>
+
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -49,20 +52,20 @@
             </button>
 
             <!-- Logo -->
-            <?php
-                $custom_logo_id = get_theme_mod( 'custom_logo' );
-                $logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-            ?>
-            <?php if ( has_custom_logo() ) : ?>
+			<?php
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+			?>
+			<?php if ( has_custom_logo() ) : ?>
                 <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
-                    <?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
+					<?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
                 </a>
-            <?php else : ?>
+			<?php else : ?>
                 <a class="navbar-brand has-not-custom-log" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
                     <span class="bloginfo"><?php bloginfo( 'name' ); ?></span>
                     <span class="tagline"><?php bloginfo( 'description' ); ?></span>
                 </a>
-            <?php endif; ?>
+			<?php endif; ?>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
