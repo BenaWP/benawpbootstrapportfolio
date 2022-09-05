@@ -22,6 +22,14 @@ get_header();
 						<?php get_template_part( 'template-parts/content/content', 'none' ); ?>
 					<?php endif; ?>
 					<?php
+
+                    // required by Wordpress.org
+					$args = array(
+						'prev_next' => false,
+						'type'      => 'array'
+					);
+					wp_link_pages( $args );
+
 					// Load numbered pagination
 					benawp_numbered_pagination();
 					?>
