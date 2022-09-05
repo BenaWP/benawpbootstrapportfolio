@@ -216,12 +216,13 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 		// BG color
 		$wp_customize->add_section( 'bg-color', array(
 			'title'       => esc_html__( 'Couleur de fond', 'benawpbootstrapportfolio' ),
-			'description' => esc_html__( 'Choisir une couleur pour le fond', 'benawpbootstrapportfolio' ),
+			'description' => esc_html__( 'Choisir une couleur pour le fond du site.', 'benawpbootstrapportfolio' ),
 			'priority'    => 50,
 		) );
 		$wp_customize->add_setting( 'body-bg', array(
 			'default'   => BG,
-			'transport' => 'refresh'
+			'transport' => 'refresh',
+			'sanitize_callback' => 'esc_html',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
 			$wp_customize,
@@ -236,16 +237,18 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 		// Jumbotron Front
 		$wp_customize->add_section( 'jumbotron', array(
 			'title'       => esc_html__( 'Bannière de la page d\'accueil', 'benawpbootstrapportfolio' ),
-			'description' => esc_html__( 'Personnalisez les textes', 'benawpbootstrapportfolio' ),
+			'description' => esc_html__( 'Vous êtes qui ? Et dites nous ce que vous faites.', 'benawpbootstrapportfolio' ),
 			'priority'    => 100,
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-title', array(
-			'default'   => esc_html__( 'Hello, your name is Replace With Yours.', 'benawpbootstrapportfolio' ),
-			'transport' => 'refresh'
+			'default'   => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawpbootstrapportfolio' ),
+			'transport' => 'refresh',
+            'sanitize_callback' => 'esc_html__',
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-subtitle', array(
-			'default'   => esc_html__( 'Then tel us about your job.', 'benawpbootstrapportfolio' ),
-			'transport' => 'refresh'
+			'default'   => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawpbootstrapportfolio' ),
+			'transport' => 'refresh',
+			'sanitize_callback' => 'esc_html__',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control(
 			$wp_customize,
