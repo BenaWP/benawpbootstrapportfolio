@@ -27,27 +27,27 @@
 	if ( comments_open() ) :
 
 		//Declare Vars
-		$comment_send     = 'Send';
-		$comment_reply    = 'Leave a Message';
-		$comment_reply_to = 'Reply';
-		$comment_author   = 'Name';
-		$comment_email    = 'E-Mail';
-		$comment_body     = 'Comment';
-		$comment_url      = 'Website';
-		$comment_cookies  = ' Save my name, email, and website in this browser for the next time I comment.';
-		$comment_before   = 'Your email address will not be published. Required fields are marked *';
-		$comment_cancel   = 'Cancel Reply';
+		$comment_send     = esc_html__( 'Envoyer', 'benawpbootstrapportfolio' );
+		$comment_reply    = esc_html__( 'Laissez un message', 'benawpbootstrapportfolio' );
+		$comment_reply_to = esc_html__( 'Répondre', 'benawpbootstrapportfolio' );
+		$comment_author   = esc_html__( 'Votre Nom', 'benawpbootstrapportfolio' );
+		$comment_email    = esc_html__( 'Votre E-Mail', 'benawpbootstrapportfolio' );
+		$comment_body     = esc_html__( 'Votre commentaire', 'benawpbootstrapportfolio' );
+		$comment_url      = esc_html__( 'Votre Site Web', 'benawpbootstrapportfolio' );
+		$comment_cookies  = esc_html__( ' Enregistrez mon nom, mon adresse électronique et mon site Web dans ce navigateur pour la prochaine fois que je commenterai.', 'benawpbootstrapportfolio' );
+		$comment_before   = esc_html__( 'Votre adresse électronique ne sera pas publiée. Les champs obligatoires sont marqués d\'un *', 'benawpbootstrapportfolio' );
+		$comment_cancel   = esc_html__( 'Annuler la réponse', 'benawpbootstrapportfolio' );
 
 		// Array comments_args
 		$comments_args = array(
 			// Define Fields
 			'fields'               => array(
 				//Author field
-				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Name *', 'benawpbootstrapportfolio' ) . '</label><br /><input id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
+				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawpbootstrapportfolio' ) . '</label><br /><input id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
 				// Email Field
 				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawpbootstrapportfolio' ) . '</label><br /><input id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
 				// URL Field
-				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Website', 'benawpbootstrapportfolio' ) . '</label><br /><input id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
+				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawpbootstrapportfolio' ) . '</label><br /><input id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
 				//Cookies
 				'cookies' => '<p><input type="checkbox" required>' . $comment_cookies . '</p>',
 			),
@@ -62,7 +62,7 @@
 			//Cancel Reply Text
 			'cancel_reply_link'    => __( $comment_cancel ),
 			// Redefine your own textarea (the comment body).
-			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '"></textarea></p>',
+			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '"></textarea></p>',
 			//Message Before Comment
 			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".
