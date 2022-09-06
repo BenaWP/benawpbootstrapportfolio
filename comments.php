@@ -62,7 +62,7 @@
 			//Cancel Reply Text
 			'cancel_reply_link'    => __( $comment_cancel ),
 			// Redefine your own textarea (the comment body).
-			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '"></textarea></p>',
+			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
 			//Message Before Comment
 			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".
