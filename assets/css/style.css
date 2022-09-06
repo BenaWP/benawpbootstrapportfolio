@@ -539,6 +539,10 @@ a {
 
 /* Comment Headers ----------------------------- */
 
+#comments .reply {
+    margin: 1rem 0;
+}
+
 .comments-wrapper {
     margin-top: 5rem;
 }
@@ -579,7 +583,24 @@ a {
     color: #fff;
 }
 
-    /* Comment Item ----------------------------- */
+#comments .avatar {
+    border-radius: 2rem;
+}
+
+.comment-author.vcard {
+    margin: 1rem 0;
+}
+
+.comment-author.vcard a.url,
+#cancel-comment-reply-link {
+    color: #fff;
+}
+
+.comment-author.vcard a.url:hover {
+    color: #fff;
+}
+
+/* Comment Item ----------------------------- */
 
 /* COMMENT HEADER */
 
@@ -588,6 +609,10 @@ a {
 .comments .trackback,
 .comments .review {
     padding-top: 3.5rem;
+}
+
+.comments .comment {
+    padding-top: 0.5rem;
 }
 
 div.comment:first-of-type {
@@ -611,9 +636,9 @@ div.comment:first-of-type {
 .comment-meta {
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    min-height: 5rem;
-    padding-left: 5rem;
+    padding-left: 0;
     position: relative;
+    font-size: 12px;
 }
 
 .hide-avatars .comment-meta {
@@ -707,10 +732,16 @@ div.comment:first-of-type {
 }
 
 .comment-reply-link {
-    background-color: #cd2653;
+    background-color: #3858e9;
     color: #fff;
     display: block;
     padding: 0.7rem;
+    width: max-content;
+    border-radius: 0.2em;
+}
+
+.comment-reply-link:hover {
+    color: #fff;
 }
 
 .bypostauthor .comment-footer-meta .by-post-author {
