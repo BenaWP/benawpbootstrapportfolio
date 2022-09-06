@@ -418,6 +418,7 @@ a {
     margin-bottom: 3rem;
 }
 
+
 #contact-form-wprap .row {
     padding-left: 4em;
     padding-right: 4em;
@@ -547,8 +548,21 @@ a {
     text-align: center;
 }
 
+#commentform {
+    width: 100%;
+    max-width: 100%;
+    background: #3858e9;
+    padding: 4em;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+}
 
-/* Comment Item ----------------------------- */
+#commentform input,
+#commentform textarea {
+    width: 100%;
+}
+
+    /* Comment Item ----------------------------- */
 
 /* COMMENT HEADER */
 
