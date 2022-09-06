@@ -262,7 +262,7 @@ p {
 }
 
 .filterable-portfolio,
-.single-post {
+.single-post.container-fluid {
     margin-bottom: 4rem;
 }
 
@@ -363,7 +363,7 @@ a {
 }
 
 .site-footer {
-    margin-bottom: 3rem;
+    /*margin-bottom: 3rem;*/
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
