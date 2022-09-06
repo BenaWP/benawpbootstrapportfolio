@@ -16,7 +16,7 @@ get_header();
 <?php endwhile; ?>
 
 <?php else: ?>
-    <?php esc_html_e( 'Oups, il semble qu\'il n\'y ait rien ici' , 'benawpbootstrapportfolio' ); ?>
+    <?php get_template_part( 'template-parts/content/content', 'none' ); ?>
 <?php endif; ?>
 
 <?php

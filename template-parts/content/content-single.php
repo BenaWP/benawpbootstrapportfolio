@@ -35,6 +35,10 @@
 					?>
                 </header>
 				<?php the_content(); ?>
+
+                <!-- Output the comments templata -->
+                <?php comments_template(); ?>
+
             </article>
         </div> <!-- end col-sm-8 -->
     </div> <!-- end row -->

@@ -74,6 +74,7 @@ if ( ! function_exists( 'benawp_post_meta' ) ) {
 	function benawp_post_meta() {
 		if ( get_post_type() === 'post' ) {
 			echo '<p class="post-meta">';
+
 			// Post author
 			echo '<span class="post-author">';
 			echo '<i class="fa-solid fa-user"></i>';
@@ -85,6 +86,14 @@ if ( ! function_exists( 'benawp_post_meta' ) ) {
 			echo '<i class="fa-solid fa-calendar"></i>';
 			echo '<span>' . get_the_date() . '</span>';
 			echo '</span>';    // <!-- end post-date >
+
+			// Post comments
+			echo '<span class="comment">';
+			echo '<a href="#comments">';
+			echo '<i class="fa fa-comment"></i>';
+			echo comments_number();
+			echo '</a></span>';
+
 			echo '</p>'; // <!-- end post-meta >
 		}
 	}
