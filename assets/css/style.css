@@ -503,10 +503,8 @@ a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.site-footer .contact-infos .glyphicon.glyphicon-phone,
-.site-footer .contact-infos .glyphicon.glyphicon-envelope {
-    display: flex;
-    gap: 0.5rem;
+.site-footer .contact-infos i {
+   margin-right: .5rem;
 }
 
 @media ( max-width: 767px ) {

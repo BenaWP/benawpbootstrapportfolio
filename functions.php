@@ -150,15 +150,15 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 				'name'          => esc_html__( 'Footer | Numéro de téléphone', 'benawpbootstrapportfolio' ),
 				'id'            => 'footer-wiget-tel',
 				'description'   => esc_html__( 'Entrer votre numéro de téléphone', 'benawpbootstrapportfolio' ),
-				'before_widget' => '<p><span class="glyphicon glyphicon-phone" aria-hidden="true"><span class="phone-number">',
-				'after_widget'  => '</span></span></p>'
+				'before_widget' => '<p><i class="fa-brands fa-whatsapp"></i><span class="phone-number">',
+				'after_widget'  => '</span></p>'
 			) );
 			register_sidebar( array(
 				'name'          => esc_html__( 'Footer | Adresse e-mail', 'benawpbootstrapportfolio' ),
 				'id'            => 'footer-wiget-mail',
 				'description'   => esc_html__( 'Entrer votre adresss électronique', 'benawpbootstrapportfolio' ),
-				'before_widget' => '<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"> <span class="email-address">',
-				'after_widget'  => '</span></span></p>'
+				'before_widget' => '<p><i class="fa-regular fa-envelope"></i><span class="email-address">',
+				'after_widget'  => '</span></p>'
 			) );
 		}
 	}

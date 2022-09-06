@@ -13,7 +13,7 @@
 			<?php if ( is_active_sidebar( 'footer-wiget-mail' ) ) : ?><?php dynamic_sidebar( 'footer-wiget-mail' ); ?><?php endif; ?>
         </div>
         <div class="col-md-6 copyright">
-            <span> Copyright © <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> </span>
+            <span> © <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </span>
         </div>
     </div> <!-- end row -->
 </footer>
