@@ -562,6 +562,14 @@ a {
     width: 100%;
 }
 
+#commentform input[ type="checkbox" ]{
+    width: auto;
+}
+
+#commentform input[ type="submit" ]{
+    width: max-content;
+}
+
     /* Comment Item ----------------------------- */
 
 /* COMMENT HEADER */

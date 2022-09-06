@@ -43,11 +43,11 @@
 			// Define Fields
 			'fields'               => array(
 				//Author field
-				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawpbootstrapportfolio' ) . '</label><br /><input id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
+				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
 				// Email Field
-				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawpbootstrapportfolio' ) . '</label><br /><input id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
+				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
 				// URL Field
-				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawpbootstrapportfolio' ) . '</label><br /><input id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
+				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
 				//Cookies
 				'cookies' => '<p><input type="checkbox" required>' . $comment_cookies . '</p>',
 			),
@@ -62,13 +62,14 @@
 			//Cancel Reply Text
 			'cancel_reply_link'    => __( $comment_cancel ),
 			// Redefine your own textarea (the comment body).
-			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '"></textarea></p>',
+			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '"></textarea></p>',
 			//Message Before Comment
 			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".
 			'comment_notes_after'  => '',
 			//Submit Button ID
 			'id_submit'            => __( 'comment-submit' ),
+			'class_submit'         => __( 'btn btn-default' )
 		);
 
 		comment_form( $comments_args );
