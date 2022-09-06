@@ -28,7 +28,7 @@
 
 		//Declare Vars
 		$comment_send     = esc_html__( 'Envoyer', 'benawpbootstrapportfolio' );
-		$comment_reply    = esc_html__( 'Laissez un message', 'benawpbootstrapportfolio' );
+		$comment_reply    = '<i class="fa fa-comment"></i>' . esc_html__( ' Commenter', 'benawpbootstrapportfolio' );
 		$comment_reply_to = esc_html__( 'Répondre', 'benawpbootstrapportfolio' );
 		$comment_author   = esc_html__( 'Votre Nom', 'benawpbootstrapportfolio' );
 		$comment_email    = esc_html__( 'Votre E-Mail', 'benawpbootstrapportfolio' );
