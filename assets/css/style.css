@@ -570,6 +570,15 @@ a {
     width: max-content;
 }
 
+.logged-in-as a {
+    font-style: italic;
+    color: #fff;
+}
+
+.logged-in-as a:hover {
+    color: #fff;
+}
+
     /* Comment Item ----------------------------- */
 
 /* COMMENT HEADER */
