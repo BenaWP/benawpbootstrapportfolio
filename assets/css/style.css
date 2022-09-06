@@ -504,7 +504,7 @@ a {
 }
 
 .site-footer .contact-infos i {
-   margin-right: .5rem;
+    margin-right: .5rem;
 }
 
 @media ( max-width: 767px ) {
@@ -513,7 +513,8 @@ a {
         justify-content: space-between;
         flex-direction: column;
     }
-    .copyright{
+
+    .copyright {
         text-align: left !important;
     }
 }
