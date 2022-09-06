@@ -40,7 +40,7 @@
 
         // Array comments_args
 		$comments_args = array(
-			// Class container
+			// Form container class
 			'class_container'      => 'comment-form-wrap',
 			// Define Fields
 			'fields'               => array(
