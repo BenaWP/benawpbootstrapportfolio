@@ -513,6 +513,10 @@ a {
     .site-footer > .row {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+    }
+    .copyright{
+        text-align: left !important;
     }
 }
 
