@@ -24,7 +24,7 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 	function benawp_theme_setup() {
 		// Make the theme available for translation
 		$lang_dir = THEME_ROOT . '/languages';
-		load_theme_textdomain( 'benawpbootstrapportfolio', $lang_dir );
+		load_theme_textdomain( 'benawp-bootstrap-portfolio', $lang_dir );
 
 		// Enables plugins and themes to manage the document title tag.
 		add_theme_support( "title-tag" );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Register nav menus
 		register_nav_menus(
 			array(
-				'main-menu' => __( 'Menu Principal', 'benawpbootstrapportfolio' )
+				'main-menu' => __( 'Menu Principal', 'benawp-bootstrap-portfolio' )
 			)
 		);
 	}
@@ -59,7 +59,7 @@ if ( ! function_exists( 'benawp_new_excerpt_more' ) ) {
 	function benawp_new_excerpt_more( $more ) {
 		global $post;
 
-		$new_read_more = '... <br><br> <a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( 'Continuez à lire', 'benawpbootstrapportfolio' ) . '</a>';
+		$new_read_more = '... <br><br> <a href="' . get_permalink( $post ) . '" class="more-link">' . esc_html__( 'Continuez à lire', 'benawp-bootstrap-portfolio' ) . '</a>';
 
 		return $new_read_more;
 	}
@@ -136,9 +136,9 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 		if ( function_exists( 'register_sidebar' ) ) {
 			// Main sidebar 
 			register_sidebar( array(
-				'name'          => esc_html__( 'Bare latérale de la page Blog', 'benawpbootstrapportfolio' ),
+				'name'          => esc_html__( 'Bare latérale de la page Blog', 'benawp-bootstrap-portfolio' ),
 				'id'            => 'blog-sidebar',
-				'description'   => esc_html__( 'Apparaît dans les pages du blog', 'benawpbootstrapportfolio' ),
+				'description'   => esc_html__( 'Apparaît dans les pages du blog', 'benawp-bootstrap-portfolio' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div> <!-- end widget -->',
 				'before_title'  => '<h2>',
@@ -147,16 +147,16 @@ if ( ! function_exists( 'benawp_widget_init' ) ) {
 
 			// Footer infos
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer | Numéro de téléphone', 'benawpbootstrapportfolio' ),
+				'name'          => esc_html__( 'Footer | Numéro de téléphone', 'benawp-bootstrap-portfolio' ),
 				'id'            => 'footer-wiget-tel',
-				'description'   => esc_html__( 'Entrer votre numéro de téléphone', 'benawpbootstrapportfolio' ),
+				'description'   => esc_html__( 'Entrer votre numéro de téléphone', 'benawp-bootstrap-portfolio' ),
 				'before_widget' => '<p><i class="fa-brands fa-whatsapp"></i><span class="phone-number">',
 				'after_widget'  => '</span></p>'
 			) );
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer | Adresse e-mail', 'benawpbootstrapportfolio' ),
+				'name'          => esc_html__( 'Footer | Adresse e-mail', 'benawp-bootstrap-portfolio' ),
 				'id'            => 'footer-wiget-mail',
-				'description'   => esc_html__( 'Entrer votre adresss électronique', 'benawpbootstrapportfolio' ),
+				'description'   => esc_html__( 'Entrer votre adresss électronique', 'benawp-bootstrap-portfolio' ),
 				'before_widget' => '<p><i class="fa-regular fa-envelope"></i><span class="email-address">',
 				'after_widget'  => '</span></p>'
 			) );
@@ -224,8 +224,8 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 
 		// BG color
 		$wp_customize->add_section( 'bg-color', array(
-			'title'       => esc_html__( 'Couleur de fond', 'benawpbootstrapportfolio' ),
-			'description' => esc_html__( 'Choisir une couleur pour le fond du site.', 'benawpbootstrapportfolio' ),
+			'title'       => esc_html__( 'Couleur de fond', 'benawp-bootstrap-portfolio' ),
+			'description' => esc_html__( 'Choisir une couleur pour le fond du site.', 'benawp-bootstrap-portfolio' ),
 			'priority'    => 50,
 		) );
 		$wp_customize->add_setting( 'body-bg', array(
@@ -237,7 +237,7 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			$wp_customize,
 			'body-background-color',
 			array(
-				'label'    => esc_html__( 'Choisir une couleur', 'benawpbootstrapportfolio' ),
+				'label'    => esc_html__( 'Choisir une couleur', 'benawp-bootstrap-portfolio' ),
 				'section'  => 'bg-color',
 				'settings' => 'body-bg'
 			)
@@ -245,17 +245,17 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 
 		// Jumbotron Front
 		$wp_customize->add_section( 'jumbotron', array(
-			'title'       => esc_html__( 'Bannière de la page d\'accueil', 'benawpbootstrapportfolio' ),
-			'description' => esc_html__( 'Vous êtes qui ? Et dites nous ce que vous faites.', 'benawpbootstrapportfolio' ),
+			'title'       => esc_html__( 'Bannière de la page d\'accueil', 'benawp-bootstrap-portfolio' ),
+			'description' => esc_html__( 'Vous êtes qui ? Et dites nous ce que vous faites.', 'benawp-bootstrap-portfolio' ),
 			'priority'    => 100,
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-title', array(
-			'default'           => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawpbootstrapportfolio' ),
+			'default'           => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawp-bootstrap-portfolio' ),
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'esc_html__',
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-subtitle', array(
-			'default'           => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawpbootstrapportfolio' ),
+			'default'           => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawp-bootstrap-portfolio' ),
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'esc_html__',
 		) );
@@ -263,7 +263,7 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			$wp_customize,
 			'jumbotron-title-customization',
 			array(
-				'label'    => esc_html__( 'Titre', 'benawpbootstrapportfolio' ),
+				'label'    => esc_html__( 'Titre', 'benawp-bootstrap-portfolio' ),
 				'section'  => 'jumbotron',
 				'settings' => 'jumbotron-front-title'
 			)
@@ -272,7 +272,7 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 			$wp_customize,
 			'jumbotron-subtitle-customization',
 			array(
-				'label'    => esc_html__( 'Sous titre', 'benawpbootstrapportfolio' ),
+				'label'    => esc_html__( 'Sous titre', 'benawp-bootstrap-portfolio' ),
 				'section'  => 'jumbotron',
 				'settings' => 'jumbotron-front-subtitle'
 			)
@@ -342,7 +342,7 @@ function benawp_register_required_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'           => 'benawpbootstrapportfolio',
+		'domain'           => 'benawp-bootstrap-portfolio',
 		// Text domain - likely want to be the same as your theme.
 		'default_path'     => '',
 		// Default absolute path to pre-packaged plugins
@@ -363,32 +363,32 @@ function benawp_register_required_plugins() {
 		'message'          => '',
 		// Message to output right before the plugins table
 		'strings'          => array(
-			'page_title'                      => __( 'Installer les plugins requis', 'benawpbootstrapportfolio' ),
-			'menu_title'                      => __( 'Installer les plugins', 'benawpbootstrapportfolio' ),
-			'installing'                      => __( 'Installation du plugin: %s', 'benawpbootstrapportfolio' ),
+			'page_title'                      => __( 'Installer les plugins requis', 'benawp-bootstrap-portfolio' ),
+			'menu_title'                      => __( 'Installer les plugins', 'benawp-bootstrap-portfolio' ),
+			'installing'                      => __( 'Installation du plugin: %s', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name
-			'oops'                            => __( 'Quelque chose s\'est mal passé avec l\'API du plugin.', 'benawpbootstrapportfolio' ),
-			'notice_can_install_required'     => _n_noop( 'Ce thème exige le plugin suivant: %1$s.', 'Ce thème exige les plugin suivants: %1$s.', 'benawpbootstrapportfolio' ),
+			'oops'                            => __( 'Quelque chose s\'est mal passé avec l\'API du plugin.', 'benawp-bootstrap-portfolio' ),
+			'notice_can_install_required'     => _n_noop( 'Ce thème exige le plugin suivant: %1$s.', 'Ce thème exige les plugin suivants: %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_can_install_recommended'  => _n_noop( 'Ce thème sera beaucoup plus mieux avec le plugin suivant: %1$s.', 'Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s.', 'benawpbootstrapportfolio' ),
+			'notice_can_install_recommended'  => _n_noop( 'Ce thème sera beaucoup plus mieux avec le plugin suivant: %1$s.', 'Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_install'           => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour installer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer les plugins.', 'benawpbootstrapportfolio' ),
+			'notice_cannot_install'           => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour installer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer les plugins.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_can_activate_required'    => _n_noop( 'Le plugin requis suivant est actuellement inactif : %1$s.', 'Les plugins requis suivants sont actuellement inactifs : %1$s.', 'benawpbootstrapportfolio' ),
+			'notice_can_activate_required'    => _n_noop( 'Le plugin requis suivant est actuellement inactif : %1$s.', 'Les plugins requis suivants sont actuellement inactifs : %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_can_activate_recommended' => _n_noop( 'Le plugin recommandé suivant est actuellement inactif: %1$s.', 'Les plugins recommandé suivant est actuellement inactif: %1$s.', 'benawpbootstrapportfolio' ),
+			'notice_can_activate_recommended' => _n_noop( 'Le plugin recommandé suivant est actuellement inactif: %1$s.', 'Les plugins recommandé suivant est actuellement inactif: %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_activate'          => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour activer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer les plugins.', 'benawpbootstrapportfolio' ),
+			'notice_cannot_activate'          => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour activer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'activer les plugins.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_ask_to_update'            => _n_noop( 'Le plugin suivant doit être mis à jour à sa dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.', 'Les plugins suivants doivent être mis à jour à leur dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.', 'benawpbootstrapportfolio' ),
+			'notice_ask_to_update'            => _n_noop( 'Le plugin suivant doit être mis à jour à sa dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.', 'Les plugins suivants doivent être mis à jour à leur dernière version pour assurer une compatibilité maximale avec ce thème : %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_cannot_update'            => _n_noop( 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour les plugins.', 'benawpbootstrapportfolio' ),
+			'notice_cannot_update'            => _n_noop( 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin de mettre à jour les plugins.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'install_link'                    => _n_noop( 'Commencez à installer le plugin', 'Commencez à installer les plugins', 'benawpbootstrapportfolio' ),
-			'activate_link'                   => _n_noop( 'Activez le plugin installé', 'Activer les plugins installés', 'benawpbootstrapportfolio' ),
-			'return'                          => __( 'Retour à l\'installation des plugins requis', 'benawpbootstrapportfolio' ),
-			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', 'benawpbootstrapportfolio' ),
-			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', 'benawpbootstrapportfolio' ),
+			'install_link'                    => _n_noop( 'Commencez à installer le plugin', 'Commencez à installer les plugins', 'benawp-bootstrap-portfolio' ),
+			'activate_link'                   => _n_noop( 'Activez le plugin installé', 'Activer les plugins installés', 'benawp-bootstrap-portfolio' ),
+			'return'                          => __( 'Retour à l\'installation des plugins requis', 'benawp-bootstrap-portfolio' ),
+			'plugin_activated'                => __( 'Le plugin a été activé avec succès.', 'benawp-bootstrap-portfolio' ),
+			'complete'                        => __( 'Tous les plugins sont installés et activés avec succès. %s', 'benawp-bootstrap-portfolio' ),
 			// %1$s = dashboard link
 			'nag_type'                        => 'notice-warning'
 			// Determines admin notice type - can only be 'updated' or 'error'

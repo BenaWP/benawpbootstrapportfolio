@@ -5,6 +5,6 @@
  * The template to be displayed for missing content.
  */
 
-esc_html_e( 'Rien n\'a été trouvé !', 'benawpbootstrapportfolio' );
+esc_html_e( 'Rien n\'a été trouvé !', 'benawp-bootstrap-portfolio' );
 
 

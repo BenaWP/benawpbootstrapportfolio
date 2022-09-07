@@ -17,10 +17,10 @@ class Benawp_Recent_Projects extends WP_Widget {
 
 		parent::__construct(
 			'benawp-recent-projects', // Base ID
-			__( 'BenaWP Projets récent', 'benawpbootstrapportfolio' ), // Name
+			__( 'BenaWP Projets récent', 'benawp-bootstrap-portfolio' ), // Name
 			array(
 				'class'                       => 'benawp-recent-projects',
-				'description'                 => __( 'Un widget personnalisé qui affiche les vignettes des qautre projets les plus récents.', 'benawpbootstrapportfolio' ),
+				'description'                 => __( 'Un widget personnalisé qui affiche les vignettes des qautre projets les plus récents.', 'benawp-bootstrap-portfolio' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -92,7 +92,7 @@ class Benawp_Recent_Projects extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		$defaults = array(
-			'title' => __( 'Projets récents', 'benawpbootstrapportfolio' )
+			'title' => __( 'Projets récents', 'benawp-bootstrap-portfolio' )
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults ); // Fusionne $instance dans le tableau $defaults.
@@ -100,7 +100,7 @@ class Benawp_Recent_Projects extends WP_Widget {
         <p>
             <label
                     for="<?php esc_attr_e( $this->get_field_id( 'title' ) ); ?>">
-				<?php esc_html_e( 'Titre: ', 'benawpbootstrapportfolio' ); ?>
+				<?php esc_html_e( 'Titre: ', 'benawp-bootstrap-portfolio' ); ?>
             </label>
 
             <input

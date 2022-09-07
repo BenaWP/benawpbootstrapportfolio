@@ -26,8 +26,8 @@
 					'echo'      => false,
 					'end_size'  => 0,
 					'mid_size'  => 0,
-					'next_text' => __( 'Commentaires plus récents', 'benawpbootstrapportfolio' ) . ' <span aria-hidden="true">&rarr;</span>',
-					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Commentaires plus anciens', 'benawpbootstrapportfolio' ),
+					'next_text' => __( 'Commentaires plus récents', 'benawp-bootstrap-portfolio' ) . ' <span aria-hidden="true">&rarr;</span>',
+					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Commentaires plus anciens', 'benawp-bootstrap-portfolio' ),
 				)
 			);
 
@@ -41,7 +41,7 @@
 				?>
 
                 <nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>"
-                     aria-label="<?php esc_attr_e( 'Commentaires', 'benawpbootstrapportfolio' ); ?>">
+                     aria-label="<?php esc_attr_e( 'Commentaires', 'benawp-bootstrap-portfolio' ); ?>">
 					<?php echo wp_kses_post( $comment_pagination ); ?>
                 </nav>
 				<?php
@@ -57,27 +57,27 @@
 	if ( comments_open() ) :
 
 		//Declare Vars
-		$comment_send     = esc_html__( 'Envoyer', 'benawpbootstrapportfolio' );
-		$comment_reply    = '<i class="fa fa-comment"></i>' . esc_html__( ' Commenter', 'benawpbootstrapportfolio' );
-		$comment_reply_to = esc_html__( 'Répondre', 'benawpbootstrapportfolio' );
-		$comment_author   = esc_html__( 'Votre Nom', 'benawpbootstrapportfolio' );
-		$comment_email    = esc_html__( 'Votre E-Mail', 'benawpbootstrapportfolio' );
-		$comment_body     = esc_html__( 'Votre commentaire', 'benawpbootstrapportfolio' );
-		$comment_url      = esc_html__( 'Votre Site Web', 'benawpbootstrapportfolio' );
-		$comment_cookies  = esc_html__( ' Enregistrez mon nom, mon adresse électronique et mon site Web dans ce navigateur pour la prochaine fois que je commenterai.', 'benawpbootstrapportfolio' );
-		$comment_before   = esc_html__( 'Votre adresse électronique ne sera pas publiée. Les champs obligatoires sont marqués d\'un *', 'benawpbootstrapportfolio' );
-		$comment_cancel   = esc_html__( 'Annuler la réponse', 'benawpbootstrapportfolio' );
+		$comment_send     = esc_html__( 'Envoyer', 'benawp-bootstrap-portfolio' );
+		$comment_reply    = '<i class="fa fa-comment"></i>' . esc_html__( ' Commenter', 'benawp-bootstrap-portfolio' );
+		$comment_reply_to = esc_html__( 'Répondre', 'benawp-bootstrap-portfolio' );
+		$comment_author   = esc_html__( 'Votre Nom', 'benawp-bootstrap-portfolio' );
+		$comment_email    = esc_html__( 'Votre E-Mail', 'benawp-bootstrap-portfolio' );
+		$comment_body     = esc_html__( 'Votre commentaire', 'benawp-bootstrap-portfolio' );
+		$comment_url      = esc_html__( 'Votre Site Web', 'benawp-bootstrap-portfolio' );
+		$comment_cookies  = esc_html__( ' Enregistrez mon nom, mon adresse électronique et mon site Web dans ce navigateur pour la prochaine fois que je commenterai.', 'benawp-bootstrap-portfolio' );
+		$comment_before   = esc_html__( 'Votre adresse électronique ne sera pas publiée. Les champs obligatoires sont marqués d\'un *', 'benawp-bootstrap-portfolio' );
+		$comment_cancel   = esc_html__( 'Annuler la réponse', 'benawp-bootstrap-portfolio' );
 
 		// Array comments_args
 		$comments_args = array(
 			// Define Fields
 			'fields'               => array(
 				//Author field
-				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
+				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
 				// Email Field
-				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
+				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
 				// URL Field
-				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawpbootstrapportfolio' ) . '</label><br /><input class="form-control" id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
+				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
 				//Cookies
 				'cookies' => '<p><input type="checkbox" required>' . $comment_cookies . '</p>',
 			),
@@ -92,7 +92,7 @@
 			//Cancel Reply Text
 			'cancel_reply_link'    => __( $comment_cancel ),
 			// Redefine your own textarea (the comment body).
-			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawpbootstrapportfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
+			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawp-bootstrap-portfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
 			//Message Before Comment
 			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".

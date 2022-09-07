@@ -12,9 +12,9 @@ class Benawp_Mail extends WP_Widget {
 
 		parent::__construct(
 			'benawp-mail', // Base ID
-			__( 'E-mail de contact', 'benawpbootstrapportfolio' ), // Name // what we can search in widget lists
+			__( 'E-mail de contact', 'benawp-bootstrap-portfolio' ), // Name // what we can search in widget lists
 			array(
-				'description'                 => __( 'Ajouter votre e-mail', 'benawpbootstrapportfolio' ),
+				'description'                 => __( 'Ajouter votre e-mail', 'benawp-bootstrap-portfolio' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -42,7 +42,7 @@ class Benawp_Mail extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			esc_html_e( $title );
 		} else {
-			esc_html_e( 'votre@email.com', 'benawpbootstrapportfolio' ); // In case the user does not put anything
+			esc_html_e( 'votre@email.com', 'benawp-bootstrap-portfolio' ); // In case the user does not put anything
 		}
 		echo $after_widget;
 	}
@@ -59,14 +59,14 @@ class Benawp_Mail extends WP_Widget {
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
 		} else {
-			$title = esc_html__( 'votre@email.com', 'benawpbootstrapportfolio' ); // Place holder
+			$title = esc_html__( 'votre@email.com', 'benawp-bootstrap-portfolio' ); // Place holder
 		}
 		?>
         <p>
             <label
                     for="<?php echo $this->get_field_name( 'title' ); ?>"
             >
-				<?php esc_html_e( 'Adresse e-mail', 'benawpbootstrapportfolio' ); ?> <!-- Label Title -->
+				<?php esc_html_e( 'Adresse e-mail', 'benawp-bootstrap-portfolio' ); ?> <!-- Label Title -->
             </label>
             <input
                     class = "widefat"

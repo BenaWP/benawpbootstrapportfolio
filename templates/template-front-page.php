@@ -17,10 +17,10 @@ get_header();
             <div class="col-md-12">
                 <ul class="nav nav-pills portfolio-filter">
                     <li class="portfolio-title">
-						<?php esc_html_e( 'Mes projets: ', 'benawpbootstrapportfolio' ); ?>
+						<?php esc_html_e( 'Mes projets: ', 'benawp-bootstrap-portfolio' ); ?>
                     </li>
                     <li role="presentation" class="active">
-                        <a href="#" data-filter="*"><?php esc_html_e( 'Tous', 'benawpbootstrapportfolio' ); ?></a>
+                        <a href="#" data-filter="*"><?php esc_html_e( 'Tous', 'benawp-bootstrap-portfolio' ); ?></a>
                     </li>
 					<?php
 					$args       = array(

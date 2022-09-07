@@ -12,9 +12,9 @@ class Benawp_Phone_Number extends WP_Widget {
 
 		parent::__construct(
 			'benawp-phone-number', // Base ID
-			__( 'Numéro de contact', 'benawpbootstrapportfolio' ), // Name // what we can search in widget lists
+			__( 'Numéro de contact', 'benawp-bootstrap-portfolio' ), // Name // what we can search in widget lists
 			array(
-				'description'                 => __( 'Ajouter votre numméro de contact', 'benawpbootstrapportfolio' ),
+				'description'                 => __( 'Ajouter votre numméro de contact', 'benawp-bootstrap-portfolio' ),
 				'customize_selective_refresh' => true,
 			)
 		);
@@ -42,7 +42,7 @@ class Benawp_Phone_Number extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			esc_html_e( $title );
 		} else {
-			esc_html_e( '0xx xx xxx xx', 'benawpbootstrapportfolio' ); // In case the user does not put anything
+			esc_html_e( '0xx xx xxx xx', 'benawp-bootstrap-portfolio' ); // In case the user does not put anything
 		}
 		echo $after_widget;
 	}
@@ -59,14 +59,14 @@ class Benawp_Phone_Number extends WP_Widget {
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
 		} else {
-			$title = esc_html__( '0xx xx xxx xx', 'benawpbootstrapportfolio' ); // Place holder
+			$title = esc_html__( '0xx xx xxx xx', 'benawp-bootstrap-portfolio' ); // Place holder
 		}
 		?>
         <p>
             <label
                     for="<?php echo $this->get_field_name( 'title' ); ?>"
             >
-				<?php esc_html_e( 'N° de téléphone', 'benawpbootstrapportfolio' ); ?> <!-- Label Title -->
+				<?php esc_html_e( 'N° de téléphone', 'benawp-bootstrap-portfolio' ); ?> <!-- Label Title -->
             </label>
             <input
                     class="widefat"
