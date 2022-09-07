@@ -324,7 +324,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// Load class strings.
 			$this->strings = array(
-				'page_title'                      => __( 'Install Required Plugins', benawp-bootstrap-portfolio ),
+				'page_title'                      => __( 'Install Required Plugins', 'benawp-bootstrap-portfolio' ),
 				'menu_title'                      => __( 'Install Plugins', 'benawp-bootstrap-portfolio' ),
 				/* translators: %s: plugin name. */
 				'installing'                      => __( 'Installing Plugin: %s', 'benawp-bootstrap-portfolio' ),
