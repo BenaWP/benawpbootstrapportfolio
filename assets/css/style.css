@@ -508,6 +508,14 @@ a {
     margin-right: .5rem;
 }
 
+.wp-form-link {
+    color: #fff;
+}
+
+.wp-form-link:hover {
+    color: #fff;
+}
+
 @media ( max-width: 767px ) {
     .site-footer > .row {
         display: flex;
@@ -566,11 +574,11 @@ a {
     width: 100%;
 }
 
-#commentform input[ type="checkbox" ]{
+#commentform input[ type="checkbox" ] {
     width: auto;
 }
 
-#commentform input[ type="submit" ]{
+#commentform input[ type="submit" ] {
     width: max-content;
 }
 

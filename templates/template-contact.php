@@ -38,7 +38,7 @@ get_header();
 
 		<?php else: ?>	
 			<?php 
-				esc_html_e( 'Veuillez installer puis activer le plugin WP Forms, c\'est obligatoire pour cet thème. Merci.', 'benawp-bootstrap-portfolio' );
+				echo sprintf( __( 'Veuillez installer puis activer le plugin <a class="wp-form-link" target="_blank" href= "%s"><b>WP Forms</b></a>, c\'est obligatoire pour ce thème. Merci.', 'benawp-bootstrap-portfolio' ), 'https://wpforms.com/'  );
 				echo '<br>';
 				esc_html_e( 'IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "contact".', 'benawp-bootstrap-portfolio' );
 			?>

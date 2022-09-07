@@ -98,8 +98,8 @@
 			// Remove "Text or HTML to be displayed after the set of comment fields".
 			'comment_notes_after'  => '',
 			//Submit Button ID
-			'id_submit'            => __( 'comment-submit' ),
-			'class_submit'         => __( 'btn btn-default' )
+			'id_submit'            => __( 'comment-submit', 'benawp-bootstrap-portfolio' ),
+			'class_submit'         => __( 'btn btn-default', 'benawp-bootstrap-portfolio' )
 		);
 
 		comment_form( $comments_args );
