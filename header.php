@@ -57,7 +57,7 @@
 			$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 			?>
 			<?php if ( has_custom_logo() ) : ?>
-                <a class="navbar-brand" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
+                <a class="navbar-brand" href="<?php esc_attr_e( esc_url( home_url( '/' ) ) ); ?>">
 					<?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
                 </a>
 			<?php else : ?>
