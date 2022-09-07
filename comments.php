@@ -19,6 +19,35 @@
 			wp_list_comments( $args );
 			?>
 
+            <?php
+
+			$comment_pagination = paginate_comments_links(
+				array(
+					'echo'      => false,
+					'end_size'  => 0,
+					'mid_size'  => 0,
+					'next_text' => __( 'Commentaires plus récents', 'benawpbootstrapportfolio' ) . ' <span aria-hidden="true">&rarr;</span>',
+					'prev_text' => '<span aria-hidden="true">&larr;</span> ' . __( 'Commentaires plus anciens', 'benawpbootstrapportfolio' ),
+				)
+			);
+
+            if ( $comment_pagination ) {
+	            $pagination_classes = '';
+
+	            // If we're only showing the "Next" link, add a class indicating so.
+	            if ( false === strpos( $comment_pagination, 'prev page-numbers' ) ) {
+		            $pagination_classes = ' only-next';
+	            }
+	            ?>
+
+                <nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" aria-label="<?php esc_attr_e( 'Commentaires', 'benawpbootstrapportfolio' ); ?>">
+		            <?php echo wp_kses_post( $comment_pagination ); ?>
+                </nav>
+            <?php
+            }
+
+            ?>
+
         </div><!-- .comments-inner -->
 
     </div><!-- comments -->
