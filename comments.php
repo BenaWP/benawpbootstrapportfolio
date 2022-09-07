@@ -73,11 +73,11 @@
 			// Define Fields
 			'fields'               => array(
 				//Author field
-				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
+				'author'  => '<p class="comment-form-author"><label for="author">' . _x( 'Nom *', 'benawp contact form', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="author" name="author" aria-required="true" placeholder="' . $comment_author . '"></input></p>',
 				// Email Field
-				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
+				'email'   => '<p class="comment-form-email"><label for="email">' . _x( 'E-Mail', 'benawp contact form', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="email" name="email" placeholder="' . $comment_email . '"></input></p>',
 				// URL Field
-				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
+				'url'     => '<p class="comment-form-url"><label for="url">' . _x( 'Site Web', 'benawp contact form', 'benawp-bootstrap-portfolio' ) . '</label><br /><input class="form-control" id="url" name="url" placeholder="' . $comment_url . '"></input></p>',
 				//Cookies
 				'cookies' => '<p><input type="checkbox" required>' . $comment_cookies . '</p>',
 			),
@@ -92,7 +92,7 @@
 			//Cancel Reply Text
 			'cancel_reply_link'    => __( $comment_cancel ),
 			// Redefine your own textarea (the comment body).
-			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawp-bootstrap-portfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
+			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawp contact form', 'benawp-bootstrap-portfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
 			//Message Before Comment
 			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".
