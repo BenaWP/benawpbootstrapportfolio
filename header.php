@@ -61,7 +61,7 @@
 					<?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
                 </a>
 			<?php else : ?>
-                <a class="navbar-brand has-not-custom-log" href="<?php esc_html_e( esc_url( home_url( '/' ) ) ); ?>">
+                <a class="navbar-brand has-not-custom-log" href="<?php esc_attr_e( esc_url( home_url( '/' ) ) ); ?>">
                     <span class="bloginfo"><?php bloginfo( 'name' ); ?></span>
                     <span class="tagline"><?php bloginfo( 'description' ); ?></span>
                 </a>
