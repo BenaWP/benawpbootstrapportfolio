@@ -19,7 +19,7 @@
 			wp_list_comments( $args );
 			?>
 
-            <?php
+			<?php
 
 			$comment_pagination = paginate_comments_links(
 				array(
@@ -31,22 +31,23 @@
 				)
 			);
 
-            if ( $comment_pagination ) {
-	            $pagination_classes = '';
+			if ( $comment_pagination ) {
+				$pagination_classes = '';
 
-	            // If we're only showing the "Next" link, add a class indicating so.
-	            if ( false === strpos( $comment_pagination, 'prev page-numbers' ) ) {
-		            $pagination_classes = ' only-next';
-	            }
-	            ?>
+				// If we're only showing the "Next" link, add a class indicating so.
+				if ( false === strpos( $comment_pagination, 'prev page-numbers' ) ) {
+					$pagination_classes = ' only-next';
+				}
+				?>
 
-                <nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" aria-label="<?php esc_attr_e( 'Commentaires', 'benawpbootstrapportfolio' ); ?>">
-		            <?php echo wp_kses_post( $comment_pagination ); ?>
+                <nav class="comments-pagination pagination<?php echo $pagination_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>"
+                     aria-label="<?php esc_attr_e( 'Commentaires', 'benawpbootstrapportfolio' ); ?>">
+					<?php echo wp_kses_post( $comment_pagination ); ?>
                 </nav>
-            <?php
-            }
+				<?php
+			}
 
-            ?>
+			?>
 
         </div><!-- .comments-inner -->
 
