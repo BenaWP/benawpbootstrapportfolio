@@ -41,6 +41,13 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Implementing Selective Refresh Support for Widgets
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Theme support recommended by WordPress Theme checker
+		add_theme_support( "wp-block-styles" );
+		add_theme_support( "responsive-embeds" );
+		add_theme_support( "html5" );
+		add_theme_support( 'custom-header' );
+		add_theme_support( "custom-background" );
+
 		// Register nav menus
 		register_nav_menus(
 			array(
