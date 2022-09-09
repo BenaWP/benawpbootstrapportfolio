@@ -20,11 +20,10 @@
 
     <!-- Favicon & Apple Touch Icon -->
 	<?php
-	$favicon   = IMAGES . '/icons/favicon.ico';
 	$touchicon = IMAGES . '/icons/apple-touch-icon-precomposed.png';
 	?>
 
-    <link rel="apple-touch-icon-precomposed" href="<?php esc_attr_e( $touchicon ); ?>" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo esc_attr( $touchicon ); ?>" sizes="152x152">
 
 	<?php wp_head(); ?>
 
