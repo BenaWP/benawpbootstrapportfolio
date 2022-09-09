@@ -12,3 +12,7 @@ BenaWP Bootstrap Portfolio est un thème WordPress basé sur Bootstrap pour les 
 - Totalement responsive pour les PC, tablettes et téléphones.
 - Un portfolio affiché en grille filtrable.
 - Une barre latérale personnalisable où vous pouvez afficher vos derniers projets avec le widget du thème "BenaWP Projets récents".
+
+# License
+BenaWP Bootstrap Portfolio, Copyright 2022 BenaWP.
+BenaWP Bootstrap Portfolio est distribué selon les termes de la licence GNU GPL.
