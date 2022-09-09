@@ -34,7 +34,7 @@ get_header();
 						?>
                         <li role="presentation">
                             <a href="#"
-                               data-filter=".<?php esc_html_e( $category->slug ); ?>"><?php esc_html_e( $category->name ); ?></a>
+                               data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
                         </li>
 						<?php
 					}
