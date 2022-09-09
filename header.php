@@ -18,7 +18,7 @@
     <meta name="description" content="<?php bloginfo( 'description' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon & Apple Touch Icon -->
+    <!-- Apple Touch Icon -->
 	<?php
 	$touchicon = IMAGES . '/icons/apple-touch-icon-precomposed.png';
 	?>

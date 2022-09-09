@@ -40,9 +40,9 @@ class Benawp_Phone_Number extends WP_Widget {
 
 		echo $before_widget;
 		if ( ! empty( $title ) ) {
-			esc_html_e( $title );
+			echo $title;
 		} else {
-			esc_html_e( '0xx xx xxx xx', 'benawp-bootstrap-portfolio' ); // In case the user does not put anything
+			echo '0xx xx xxx xx'; // In case the user does not put anything
 		}
 		echo $after_widget;
 	}
@@ -59,7 +59,7 @@ class Benawp_Phone_Number extends WP_Widget {
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
 		} else {
-			$title = esc_html__( '0xx xx xxx xx', 'benawp-bootstrap-portfolio' ); // Place holder
+			$title = '0xx xx xxx xx'; // Place holder
 		}
 		?>
         <p>
