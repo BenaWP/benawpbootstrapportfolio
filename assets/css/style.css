@@ -949,3 +949,16 @@ div.comment:first-of-type {
 .single .post-thumbnail {
     margin-bottom: 54px;
 }
+
+/**
+* Recommanded by the Theme Checker
+ */
+.wp-caption {}
+
+.wp-caption-text {}
+
+.sticky {}
+
+.gallery-caption {}
+
+.aligncenter {}
