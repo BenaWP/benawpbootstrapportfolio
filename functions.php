@@ -47,6 +47,7 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		add_theme_support( "html5" );
 		add_theme_support( 'custom-header' );
 		add_theme_support( "custom-background" );
+		add_theme_support( 'align-wide' );
 
 		// Register nav menus
 		register_nav_menus(
@@ -436,4 +437,12 @@ if ( function_exists( 'register_block_style' ) ) {
 		)
 	);
 }
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function benawp_add_editor_styles() {
+	add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'benawp_add_editor_styles' );
 
