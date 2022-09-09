@@ -675,7 +675,6 @@ div.comment:first-of-type {
 
 .comment-meta .avatar {
     height: 4rem;
-    position: absolute;
     left: 0;
     top: 0;
     width: 4rem;
@@ -686,6 +685,9 @@ div.comment:first-of-type {
 }
 
 .comment-metadata {
+    position: absolute;
+    left: 5rem;
+    bottom: 0;
     color: #6d6d6d;
     font-size: 1.4rem;
     font-weight: 500;
@@ -694,6 +696,9 @@ div.comment:first-of-type {
 
 .comment-metadata a {
     text-decoration: none;
+    color: #fff;
+    font-style: italic;
+    font-size: .8rem;
 }
 
 .comment-metadata a:focus,

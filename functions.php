@@ -192,6 +192,10 @@ if ( ! function_exists( 'benawp_scripts' ) ) {
 		wp_enqueue_script( 'isotope-js' );
 		wp_enqueue_script( 'plugins-js' );
 		wp_enqueue_script( 'main-js' );
+        // The comment-reply script
+		if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 
 		// Load the stylesheets
 		wp_enqueue_style( 'fontawesome-css', LIBS . '/fontawesome/css/all.min.css', false, '6.2.0' );
