@@ -17,13 +17,6 @@
     <meta name="description" content="<?php bloginfo( 'description' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Apple Touch Icon -->
-	<?php
-	$touchicon = IMAGES . '/icons/apple-touch-icon-precomposed.png';
-	?>
-
-    <link rel="apple-touch-icon-precomposed" href="<?php echo esc_attr( $touchicon ); ?>" sizes="152x152">
-
 	<?php wp_head(); ?>
 
 </head>
