@@ -67,7 +67,7 @@ get_header();
 						}
 
 						?>
-                        <figure class="portfolio-item col-sm-4 item<?php esc_html_e( $slugs ); ?>">
+                        <figure class="portfolio-item col-sm-4 item<?php echo $slugs; ?>">
                             <a
                                     href="<?php the_permalink(); ?>"
                                     title="<?php the_title_attribute(); ?>"

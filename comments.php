@@ -84,17 +84,17 @@
 			// Form container class
 			'class_container'      => 'comment-form-wrap',
 			// Change the title of send button
-			'label_submit'         => __( $comment_send ),
+			'label_submit'         => $comment_send,
 			// Change the title of the reply section
-			'title_reply'          => __( $comment_reply ),
+			'title_reply'          => $comment_reply,
 			// Change the title of the reply section
-			'title_reply_to'       => __( $comment_reply_to ),
+			'title_reply_to'       => $comment_reply_to,
 			//Cancel Reply Text
-			'cancel_reply_link'    => __( $comment_cancel ),
+			'cancel_reply_link'    => $comment_cancel,
 			// Redefine your own textarea (the comment body).
 			'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Commentaire *', 'benawp contact form', 'benawp-bootstrap-portfolio' ) . '</label><br /><textarea class="form-control" id="comment" name="comment" aria-required="true" placeholder="' . $comment_body . '" rows="4"></textarea></p>',
 			//Message Before Comment
-			'comment_notes_before' => '<p class="comment-before">' . __( $comment_before ) . '</p>',
+			'comment_notes_before' => '<p class="comment-before">' . $comment_before . '</p>',
 			// Remove "Text or HTML to be displayed after the set of comment fields".
 			'comment_notes_after'  => '',
 			//Submit Button ID
