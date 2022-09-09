@@ -378,6 +378,13 @@ a {
     gap: 1rem;
 }
 
+@media ( max-width: 767px ) {
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .post-meta i {
     margin-right: 0.3rem;
     font-size: .9rem;
@@ -924,4 +931,21 @@ div.comment:first-of-type {
 .comment-reply-title small a:focus,
 .comment-reply-title small a:hover {
     text-decoration: underline;
+}
+
+/*---- Post Tag style --------*/
+.tag {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.tag a {
+    color: #fff;
+}
+
+.single .post-thumbnail {
+    margin-bottom: 54px;
 }

@@ -15,13 +15,21 @@
         </div> <!-- end row -->
     </div> <!-- end jumbotron -->
 
-    <div class="jumbotron">
+    <div class="post-thumbnail">
         <div class="row">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( 'full', [ 'class' => 'img-responsive center-block' ] ); ?>
 			<?php endif; ?>
         </div> <!-- end row -->
-    </div> <!-- end jumbotron -->
+
+        <!-- Tags if exists -->
+        <div class="tag">
+	        <?php
+	        the_tags( '<span><i class="fa fa-tag"></i> ', ' . ', '</span>' );
+	        ?>
+        </div> <!-- End Tag(s) if exist -->
+
+    </div> <!-- end post-thumbnail -->
 </div> <!-- end container-fluid -->
 
 <div class="single-post container-fluid">

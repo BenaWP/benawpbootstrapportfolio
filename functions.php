@@ -412,6 +412,7 @@ function benawp_register_required_plugins() {
 }
 
 /**
+ * 11.
  * When Submiting theme
  * Register block style
  */
@@ -428,6 +429,7 @@ if ( function_exists( 'register_block_style' ) ) {
 }
 
 /**
+ * 12.
  * When Submiting theme
  * Register block pattern
  */
@@ -443,6 +445,7 @@ if ( function_exists( 'register_block_style' ) ) {
 }
 
 /**
+ * 13.
  * Registers an editor stylesheet for the theme.
  */
 function benawp_add_editor_styles() {
