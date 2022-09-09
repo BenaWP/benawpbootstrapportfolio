@@ -40,7 +40,7 @@ class Benawp_Mail extends WP_Widget {
 
 		echo $before_widget;
 		if ( ! empty( $title ) ) {
-			esc_html_e( $title );
+			echo $title;
 		} else {
 			esc_html_e( 'votre@email.com', 'benawp-bootstrap-portfolio' ); // In case the user does not put anything
 		}
