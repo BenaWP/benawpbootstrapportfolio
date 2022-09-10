@@ -576,6 +576,13 @@ a {
     margin-bottom: 3rem;
 }
 
+@media ( max-width: 767px ) {
+    #commentform {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 #commentform input,
 #commentform textarea {
     width: 100%;
@@ -953,12 +960,17 @@ div.comment:first-of-type {
 /**
 * Recommanded classes by the Theme Checker
  */
-.wp-caption {}
+.wp-caption {
+}
 
-.wp-caption-text {}
+.wp-caption-text {
+}
 
-.sticky {}
+.sticky {
+}
 
-.gallery-caption {}
+.gallery-caption {
+}
 
-.aligncenter {}
+.aligncenter {
+}
