@@ -85,13 +85,13 @@ if ( ! function_exists( 'benawp_post_meta' ) ) {
 
 			// Post author
 			echo '<span class="post-author">';
-			echo '<i class="fa-solid fa-user"></i>';
+			echo '<i class="fa-solid fa-pen-to-square"></i>';
 			printf( '<a href="%1$s" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 			echo '</span>'; // <!-- post-author >
 
 			// Post date
 			echo '<span class="post-date">';
-			echo '<i class="fa-solid fa-calendar"></i>';
+			echo '<i class="fa-sharp fa-solid fa-calendar-days"></i>';
 			echo '<span>' . get_the_date() . '</span>';
 			echo '</span>';    // <!-- end post-date >
 
