@@ -264,12 +264,12 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 		$wp_customize->add_setting( 'jumbotron-front-title', array(
 			'default'           => esc_html__( 'Hello, mon nom est Remplacer par le votre.', 'benawp-bootstrap-portfolio' ),
 			'transport'         => 'refresh',
-			'sanitize_callback' => 'esc_html__',
+			'sanitize_callback' => 'benawp_sanitize_input',
 		) );
 		$wp_customize->add_setting( 'jumbotron-front-subtitle', array(
 			'default'           => esc_html__( 'Ensuite, parler nous de ce que vous faites.', 'benawp-bootstrap-portfolio' ),
 			'transport'         => 'refresh',
-			'sanitize_callback' => 'esc_html__',
+			'sanitize_callback' => 'benawp_sanitize_input',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control(
 			$wp_customize,
@@ -292,6 +292,17 @@ if ( ! function_exists( 'benawp_customize_register' ) ) {
 	}
 
 	add_action( 'customize_register', 'benawp_customize_register' );
+}
+
+/**
+ * Sanitizing the input data from the jumbotron on front page
+ * Sanitization callback
+ * @param $text
+ *
+ * @return string
+ */
+function benawp_sanitize_input ( $text ) {
+    return sanitize_text_field( $text );
 }
 
 /**
