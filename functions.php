@@ -226,7 +226,7 @@ if ( ! function_exists( 'benawp_validate_length' ) ) {
 
 /**
  * 9. Customizer API
- * Customizing the site backgrund-color
+ * Registers options with the Theme Customizer
  *
  * @param object $wp_customize The Customize API object
  */
