@@ -13,7 +13,7 @@
 			<?php if ( is_active_sidebar( 'footer-wiget-mail' ) ) : ?><?php dynamic_sidebar( 'footer-wiget-mail' ); ?><?php endif; ?>
         </div>
         <div class="col-md-6 copyright">
-            <span> <?php esc_html_e( 'Copyright &copy;', 'benawp-bootstrap-portfolio' ); ?> <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </span>
+            <span> &copy; <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </span>
         </div>
     </div> <!-- end row -->
 </footer>
