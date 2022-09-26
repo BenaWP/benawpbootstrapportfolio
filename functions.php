@@ -314,7 +314,7 @@ if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
 		?>
         <style>
             html {
-                background-color: <?php esc_html_e( get_theme_mod( 'body-bg', BG ) ); ?>;
+                background-color: <?php echo esc_html( get_theme_mod( 'body-bg', BG ) ); ?>;
             }
         </style>
 		<?php
