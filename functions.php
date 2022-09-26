@@ -369,12 +369,12 @@ function benawp_register_required_plugins() {
 		// Text domain - likely want to be the same as your theme.
 		'default_path'     => '',
 		// Default absolute path to pre-packaged plugins
-		'parent_menu_slug' => 'themes.php',
-		// Default parent menu slug
-		'parent_url_slug'  => 'themes.php',
-		// Default parent URL slug
 		'menu'             => 'install-required-plugins',
 		// Menu slug
+		'parent_slug' => 'themes.php',
+		// Parent menu slug.
+		'capability'   => 'edit_theme_options',
+		// Capability needed to view plugin install page, should be a capability associated with the parent menu used.
 		'has_notices'      => true,
 		// Show admin notices or not
 		'dismissable'      => false,
