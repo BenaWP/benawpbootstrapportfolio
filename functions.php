@@ -341,7 +341,7 @@ function benawp_register_required_plugins() {
 			// The plugin name on wordpress.org.
 			'slug'               => 'wpforms-lite',
 			// Plugin slug on wordpress.org
-			'required'           => true,
+			'required'           => false,
 			// If false, the plugin is only 'recommended' instead of required.
 			'version'            => '',
 			// E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
@@ -393,7 +393,7 @@ function benawp_register_required_plugins() {
 			'oops'                            => __( 'Quelque chose s\'est mal passé avec l\'API du plugin.', 'benawp-bootstrap-portfolio' ),
 			'notice_can_install_required'     => _n_noop( 'Ce thème exige le plugin suivant: %1$s.', 'Ce thème exige les plugin suivants: %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
-			'notice_can_install_recommended'  => _n_noop( 'Ce thème sera beaucoup plus mieux avec le plugin suivant: %1$s.', 'Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s.', 'benawp-bootstrap-portfolio' ),
+			'notice_can_install_recommended'  => _n_noop( 'La page de contact de ce thème aura besoin du plugin suivant: %1$s.', 'Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
 			'notice_cannot_install'           => _n_noop( 'Désolé, mais vous n\'avez pas les autorisations nécessaires pour installer le plugin %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer le plugin.', 'Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer les plugins %s. Contactez l\'administrateur de ce site pour obtenir de l\'aide afin d\'installer les plugins.', 'benawp-bootstrap-portfolio' ),
 			// %1$s = plugin name(s)
