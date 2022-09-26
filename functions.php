@@ -331,7 +331,7 @@ if ( ! function_exists( 'benawp_bg_color_customize_css' ) ) {
  * 10.a.Include the TGM_Plugin_Activation class.
  */
 require_once dirname( __FILE__ ) . '/classes/class-tgm-plugin-activation.php';
-add_action( 'tgmpa_register', 'benawp_register_required_plugins' );
+add_action( 'benawp_tgmpa_register', 'benawp_register_required_plugins' );
 
 function benawp_register_required_plugins() {
 

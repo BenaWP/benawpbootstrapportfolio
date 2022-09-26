@@ -257,7 +257,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$this->wp_version = $GLOBALS['wp_version'];
 
 			// Announce that the class is ready, and pass the object (for advanced use).
-			do_action_ref_array( 'tgmpa_init', array( $this ) );
+			do_action_ref_array( 'benawp_tgmpa_init', array( $this ) );
 
 
 
@@ -318,7 +318,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			 * @param bool $load Whether or not TGMPA should load.
 			 *                   Defaults to the return of `is_admin() && ! defined( 'DOING_AJAX' )`.
 			 */
-			if ( true !== apply_filters( 'tgmpa_load', ( is_admin() && ! defined( 'DOING_AJAX' ) ) ) ) {
+			if ( true !== apply_filters( 'benawp_tgmpa_load', ( is_admin() && ! defined( 'DOING_AJAX' ) ) ) ) {
 				return;
 			}
 
@@ -397,7 +397,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'benawp-bootstrap-portfolio' ),
 			);
 
-			do_action( 'tgmpa_register' );
+			do_action( 'benawp_tgmpa_register' );
 
 			/* After this point, the plugins should be registered and the configuration set. */
 
@@ -545,7 +545,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @since 2.1.0
 		 *
 		 * @global string $tab Used as iframe div class names, helps with styling
-		 * @global string $body_id Used as the iframe body ID, helps with styling
+		 * @global string $benawp_body_id Used as the iframe body ID, helps with styling
 		 *
 		 * @return null Returns early if not the TGMPA page.
 		 */
@@ -560,8 +560,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				wp_enqueue_style( 'plugin-install' );
 
-				global $tab, $body_id;
-				$body_id = 'plugin-information';
+				global $tab, $benawp_body_id;
+				$benawp_body_id = 'plugin-information';
 				// @codingStandardsIgnoreStart
 				$tab     = 'plugin-information';
 				// @codingStandardsIgnoreEnd
@@ -611,7 +611,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			}
 
 			$args = apply_filters(
-				'tgmpa_admin_menu_args',
+				'benawp_tgmpa_admin_menu_args',
 				array(
 					'parent_slug' => $this->parent_slug,                     // Parent Menu slug.
 					'page_title'  => $this->strings['page_title'],           // Page title.
@@ -1020,7 +1020,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function notices() {
 			// Remove nag on the install page / Return early if the nag message has been dismissed or user < author.
-			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) {
+			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'benawp_tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) {
 				return;
 			}
 
@@ -1192,13 +1192,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				);
 			}
 
-			$action_links = apply_filters( 'tgmpa_notice_action_links', $action_links );
+			$action_links = apply_filters( 'benawp_tgmpa_notice_action_links', $action_links );
 
 			$action_links = array_filter( (array) $action_links ); // Remove any empty array items.
 
 			if ( ! empty( $action_links ) ) {
 				$action_links = sprintf( $line_template, implode( ' | ', $action_links ) );
-				return apply_filters( 'tgmpa_notice_rendered_action_links', $action_links );
+				return apply_filters( 'benawp_tgmpa_notice_rendered_action_links', $action_links );
 			} else {
 				return '';
 			}
@@ -1369,7 +1369,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			 * @param string $key     Sanitized key.
 			 * @param string $raw_key The key prior to sanitization.
 			 */
-			return apply_filters( 'tgmpa_sanitize_key', $key, $raw_key );
+			return apply_filters( 'benawp_tgmpa_sanitize_key', $key, $raw_key );
 		}
 
 		/**
@@ -2002,21 +2002,21 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		}
 	}
 
-	if ( ! function_exists( 'load_tgm_plugin_activation' ) ) {
+	if ( ! function_exists( 'benawp_load_tgm_plugin_activation' ) ) {
 		/**
 		 * Ensure only one instance of the class is ever invoked.
 		 *
 		 * @since 2.5.0
 		 */
-		function load_tgm_plugin_activation() {
-			$GLOBALS['tgmpa'] = TGM_Plugin_Activation::get_instance();
+		function benawp_load_tgm_plugin_activation() {
+			$GLOBALS['benawp_tgmpa'] = TGM_Plugin_Activation::get_instance();
 		}
 	}
 
 	if ( did_action( 'plugins_loaded' ) ) {
-		load_tgm_plugin_activation();
+		benawp_load_tgm_plugin_activation();
 	} else {
-		add_action( 'plugins_loaded', 'load_tgm_plugin_activation' );
+		add_action( 'plugins_loaded', 'benawp_load_tgm_plugin_activation' );
 	}
 }
 
@@ -2031,7 +2031,7 @@ if ( ! function_exists( 'tgmpa' ) ) {
 	 * @param array $config  Optional. An array of configuration values.
 	 */
 	function tgmpa( $plugins, $config = array() ) {
-		$instance = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+		$instance = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 		foreach ( $plugins as $plugin ) {
 			call_user_func( array( $instance, 'register' ), $plugin );
@@ -2126,7 +2126,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function __construct() {
-			$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+			$this->tgmpa = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 			parent::__construct(
 				array(
@@ -2140,7 +2140,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				$this->view_context = sanitize_key( $_REQUEST['plugin_status'] );
 			}
 
-			add_filter( 'tgmpa_table_data_items', array( $this, 'sort_table_items' ) );
+			add_filter( 'benawp_tgmpa_table_data_items', array( $this, 'sort_table_items' ) );
 		}
 
 		/**
@@ -2202,7 +2202,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					add_action( "tgmpa_after_plugin_row_{$slug}", array( $this, 'wp_plugin_update_row' ), 10, 2 );
 				}
 
-				$table_data[ $i ] = apply_filters( 'tgmpa_table_data_item', $table_data[ $i ], $plugin );
+				$table_data[ $i ] = apply_filters( 'benawp_tgmpa_table_data_item', $table_data[ $i ], $plugin );
 
 				$i++;
 			}
@@ -2554,7 +2554,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				$columns['status']  = __( 'Status', 'benawp-bootstrap-portfolio' );
 			}
 
-			return apply_filters( 'tgmpa_table_columns', $columns );
+			return apply_filters( 'benawp_tgmpa_table_columns', $columns );
 		}
 
 		/**
@@ -2637,7 +2637,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			}
 
 			$prefix = ( defined( 'WP_NETWORK_ADMIN' ) && WP_NETWORK_ADMIN ) ? 'network_admin_' : '';
-			return apply_filters( "tgmpa_{$prefix}plugin_action_links", array_filter( $action_links ), $item['slug'], $item, $this->view_context );
+			return apply_filters( "benawp_tgmpa_{$prefix}plugin_action_links", array_filter( $action_links ), $item['slug'], $item, $this->view_context );
 		}
 
 		/**
@@ -2658,7 +2658,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			 *
 			 * @since 2.5.0
 			 */
-			do_action( "tgmpa_after_plugin_row_{$item['slug']}", $item['slug'], $item, $this->view_context );
+			do_action( "benawp_tgmpa_after_plugin_row_{$item['slug']}", $item['slug'], $item, $this->view_context );
 		}
 
 		/**
@@ -2863,9 +2863,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 				unset( $slug, $name, $source );
 
-				// Create a new instance of TGMPA_Bulk_Installer.
-				$installer = new TGMPA_Bulk_Installer(
-					new TGMPA_Bulk_Installer_Skin(
+				// Create a new instance of BENAWP_TGMPA_Bulk_Installer.
+				$installer = new BENAWP_TGMPA_Bulk_Installer(
+					new BENAWP_TGMPA_Bulk_Installer_Skin(
 						array(
 							'url'          => esc_url_raw( $this->tgmpa->get_tgmpa_url() ),
 							'nonce'        => 'bulk-' . $this->_args['plural'],
@@ -2989,7 +2989,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			}
 
 			// Store all of our plugin data into $items array so WP_List_Table can use it.
-			$this->items = apply_filters( 'tgmpa_table_data_items', $this->_gather_plugin_data() );
+			$this->items = apply_filters( 'benawp_tgmpa_table_data_items', $this->_gather_plugin_data() );
 		}
 
 		/* *********** DEPRECATED METHODS *********** */
@@ -3021,7 +3021,7 @@ if ( ! class_exists( 'TGM_Bulk_Installer' ) ) {
 	 *
 	 * @since 2.5.2
 	 *
-	 * {@internal The TGMPA_Bulk_Installer class was originally called TGM_Bulk_Installer.
+	 * {@internal The BENAWP_TGMPA_Bulk_Installer class was originally called TGM_Bulk_Installer.
 	 *            For more information, see that class.}}
 	 */
 	class TGM_Bulk_Installer {
@@ -3034,7 +3034,7 @@ if ( ! class_exists( 'TGM_Bulk_Installer_Skin' ) ) {
 	 *
 	 * @since 2.5.2
 	 *
-	 * {@internal The TGMPA_Bulk_Installer_Skin class was originally called TGM_Bulk_Installer_Skin.
+	 * {@internal The BENAWP_TGMPA_Bulk_Installer_Skin class was originally called TGM_Bulk_Installer_Skin.
 	 *            For more information, see that class.}}
 	 */
 	class TGM_Bulk_Installer_Skin {
@@ -3051,26 +3051,26 @@ if ( ! class_exists( 'TGM_Bulk_Installer_Skin' ) ) {
  *
  * @since 2.2.0
  */
-add_action( 'admin_init', 'tgmpa_load_bulk_installer' );
-if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
+add_action( 'admin_init', 'benawp_tgmpa_load_bulk_installer' );
+if ( ! function_exists( 'benawp_tgmpa_load_bulk_installer' ) ) {
 	/**
 	 * Load bulk installer
 	 */
-	function tgmpa_load_bulk_installer() {
+	function benawp_tgmpa_load_bulk_installer() {
 		// Silently fail if 2.5+ is loaded *after* an older version.
-		if ( ! isset( $GLOBALS['tgmpa'] ) ) {
+		if ( ! isset( $GLOBALS['benawp_tgmpa'] ) ) {
 			return;
 		}
 
 		// Get TGMPA class instance.
-		$tgmpa_instance = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+		$tgmpa_instance = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 		if ( isset( $_GET['page'] ) && $tgmpa_instance->menu === $_GET['page'] ) {
 			if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
 				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 			}
 
-			if ( ! class_exists( 'TGMPA_Bulk_Installer' ) ) {
+			if ( ! class_exists( 'BENAWP_TGMPA_Bulk_Installer' ) ) {
 
 				/**
 				 * Installer class to handle bulk plugin installations.
@@ -3088,7 +3088,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @author  Thomas Griffin
 				 * @author  Gary Jones
 				 */
-				class TGMPA_Bulk_Installer extends Plugin_Upgrader {
+				class BENAWP_TGMPA_Bulk_Installer extends Plugin_Upgrader {
 					/**
 					 * Holds result of bulk plugin installation.
 					 *
@@ -3134,7 +3134,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 */
 					public function __construct( $skin = null ) {
 						// Get TGMPA class instance.
-						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 						parent::__construct( $skin );
 
@@ -3146,7 +3146,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							$this->activate_strings();
 						}
 
-						add_action( 'upgrader_process_complete', array( $this->tgmpa, 'populate_file_path' ) );
+						add_action( 'benawp_upgrader_process_complete', array( $this->tgmpa, 'populate_file_path' ) );
 					}
 
 					/**
@@ -3314,7 +3314,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						 *     @type array  $packages Array of plugin, theme, or core packages to update.
 						 * }
 						 */
-						do_action( 'upgrader_process_complete', $this, array(
+						do_action( 'benawp_upgrader_process_complete', $this, array(
 							'action'  => 'install', // [TGMPA + ] adjusted.
 							'type'    => 'plugin',
 							'bulk'    => true,
@@ -3399,7 +3399,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				}
 			}
 
-			if ( ! class_exists( 'TGMPA_Bulk_Installer_Skin' ) ) {
+			if ( ! class_exists( 'BENAWP_TGMPA_Bulk_Installer_Skin' ) ) {
 
 				/**
 				 * Installer skin to set strings for the bulk plugin installations..
@@ -3410,7 +3410,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @since 2.2.0
 				 *
 				 * {@internal Since 2.5.2 the class has been renamed from TGM_Bulk_Installer_Skin to
-				 *            TGMPA_Bulk_Installer_Skin.
+				 *            BENAWP_TGMPA_Bulk_Installer_Skin.
 				 *            This was done to prevent backward compatibility issues with v2.3.6.}}
 				 *
 				 * @see https://core.trac.wordpress.org/browser/trunk/src/wp-admin/includes/class-wp-upgrader-skins.php
@@ -3419,7 +3419,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @author  Thomas Griffin
 				 * @author  Gary Jones
 				 */
-				class TGMPA_Bulk_Installer_Skin extends Bulk_Upgrader_Skin {
+				class BENAWP_TGMPA_Bulk_Installer_Skin extends Bulk_Upgrader_Skin {
 					/**
 					 * Holds plugin info for each individual plugin installation.
 					 *
@@ -3465,7 +3465,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 */
 					public function __construct( $args = array() ) {
 						// Get TGMPA class instance.
-						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 						// Parse default and new args.
 						$defaults = array(
@@ -3591,7 +3591,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						 * @param array $update_actions Array of plugin action links.
 						 * @param array $plugin_info    Array of information for the last-handled plugin.
 						 */
-						$update_actions = apply_filters( 'tgmpa_update_bulk_plugins_complete_actions', $update_actions, $this->plugin_info );
+						$update_actions = apply_filters( 'benawp_tgmpa_update_bulk_plugins_complete_actions', $update_actions, $this->plugin_info );
 
 						if ( ! empty( $update_actions ) ) {
 							$this->feedback( implode( ' | ', (array) $update_actions ) );
