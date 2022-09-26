@@ -44,7 +44,7 @@ if ( ! function_exists( 'benawp_theme_setup' ) ) {
 		// Theme support recommended by WordPress Theme checker
 		add_theme_support( "wp-block-styles" );
 		add_theme_support( "responsive-embeds" );
-		add_theme_support( "html5" );
+		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 		add_theme_support( 'custom-header' );
 		add_theme_support( "custom-background" );
 		add_theme_support( 'align-wide' );
