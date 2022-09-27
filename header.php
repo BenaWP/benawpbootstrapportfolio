@@ -48,11 +48,11 @@
 			$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 			?>
 			<?php if ( has_custom_logo() ) : ?>
-                <a class="navbar-brand" href="<?php esc_attr_e( esc_url( home_url( '/' ) ) ); ?>">
+                <a class="navbar-brand" href="<?php echo esc_attr( esc_url( home_url( '/' ) ) ); ?>">
 					<?php echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; ?>
                 </a>
 			<?php else : ?>
-                <a class="navbar-brand has-not-custom-log" href="<?php esc_attr_e( esc_url( home_url( '/' ) ) ); ?>">
+                <a class="navbar-brand has-not-custom-log" href="<?php echo esc_attr( esc_url( home_url( '/' ) ) ); ?>">
                     <span class="bloginfo"><?php bloginfo( 'name' ); ?></span>
                     <span class="tagline"><?php bloginfo( 'description' ); ?></span>
                 </a>
