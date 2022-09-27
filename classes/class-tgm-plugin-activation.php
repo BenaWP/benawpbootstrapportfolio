@@ -2020,7 +2020,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 	}
 }
 
-if ( ! function_exists( 'tgmpa' ) ) {
+if ( ! function_exists( 'benawp_tgmpa' ) ) {
 	/**
 	 * Helper function to register a collection of required plugins.
 	 *
@@ -2030,7 +2030,7 @@ if ( ! function_exists( 'tgmpa' ) ) {
 	 * @param array $plugins An array of plugin arrays.
 	 * @param array $config  Optional. An array of configuration values.
 	 */
-	function tgmpa( $plugins, $config = array() ) {
+	function benawp_tgmpa( $plugins, $config = array() ) {
 		$instance = call_user_func( array( get_class( $GLOBALS['benawp_tgmpa'] ), 'get_instance' ) );
 
 		foreach ( $plugins as $plugin ) {

@@ -418,7 +418,7 @@ function benawp_register_required_plugins() {
 		)
 	);
 
-	tgmpa( $plugins, $config );
+	benawp_tgmpa( $plugins, $config );
 
 }
 
@@ -427,7 +427,7 @@ function benawp_register_required_plugins() {
  * When Submiting theme
  * Register block style
  */
-if ( function_exists( 'register_block_style' ) ) {
+/*if ( function_exists( 'register_block_style' ) ) {
 	register_block_style(
 		'core/quote',
 		array(
@@ -437,14 +437,14 @@ if ( function_exists( 'register_block_style' ) ) {
 			'inline_style' => '.wp-block-quote.is-style-blue-quote { color: blue; }',
 		)
 	);
-}
+}*/
 
 /**
  * 12.
  * When Submiting theme
  * Register block pattern
  */
-if ( function_exists( 'register_block_style' ) ) {
+/*if ( function_exists( 'register_block_style' ) ) {
 	register_block_pattern(
 		'wpdocs-my-plugin/my-awesome-pattern',
 		array(
@@ -453,7 +453,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'content'     => "<!-- wp:buttons {\"align\":\"center\"} -->\n<div class=\"wp-block-buttons aligncenter\"><!-- wp:button {\"backgroundColor\":\"very-dark-gray\",\"borderRadius\":0} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background has-very-dark-gray-background-color no-border-radius\">" . esc_html__( 'Bouton 1', 'benawp-bootstrap-portfolio' ) . "</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"textColor\":\"very-dark-gray\",\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-text-color has-very-dark-gray-color no-border-radius\">" . esc_html__( 'Bouton 2', 'benawp-bootstrap-portfolio' ) . "</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
 		)
 	);
-}
+}*/
 
 /**
  * 13.
