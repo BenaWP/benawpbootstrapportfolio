@@ -23,18 +23,18 @@ get_header();
                         <a href="#" data-filter="*"><?php esc_html_e( 'Tous', 'benawp-bootstrap-portfolio' ); ?></a>
                     </li>
 					<?php
-					$args       = array(
+					$benawp_cat_args       = array(
 						'orderby'    => 'name',
 						'order'      => 'ASC',
 						'hide_empty' => 'true',
 						'exclude'    => '1'
 					);
-					$categories = get_categories( $args );
-					foreach ( $categories as $category ) {
+					$benawp_categories = get_categories( $benawp_cat_args );
+					foreach ( $benawp_categories as $benawp_category ) {
 						?>
                         <li role="presentation">
                             <a href="#"
-                               data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
+                               data-filter=".<?php echo $benawp_category->slug; ?>"><?php echo $benawp_category->name; ?></a>
                         </li>
 						<?php
 					}
@@ -46,28 +46,28 @@ get_header();
         <!-- row for the thumbnails categories -->
         <div class="portfolio-items row">
 			<?php
-			$queryArgs = array(
+			$benawp_query_args = array(
 				'cat'            => '-1', // No Uncategorized
 				'posts_per_page' => '-1', // Show all posts
 			);
-			$query     = new WP_Query( $queryArgs );
+			$benawp_query     = new WP_Query( $benawp_query_args );
 
 			// Start the Loop
-			if ( $query->have_posts() ) {
-				while ( $query->have_posts() ) {
-					$query->the_post();
+			if ( $benawp_query->have_posts() ) {
+				while ( $benawp_query->have_posts() ) {
+					$benawp_query->the_post();
 					// If this posts has a thumbanail,
 					// Then, we have to get the curent categorie for that post
 					if ( has_post_thumbnail() ) {
-						$slugs             = '';
-						$currentCategories = get_the_category();
+						$benawp_slugs             = '';
+						$benawp_currentCategories = get_the_category();
 
-						foreach ( $currentCategories as $currentCategory ) {
-							$slugs .= ' ' . $currentCategory->slug;
+						foreach ( $benawp_currentCategories as $benawp_currentCategory ) {
+							$benawp_slugs .= ' ' . $benawp_currentCategory->slug;
 						}
 
 						?>
-                        <figure class="portfolio-item col-sm-4 item<?php echo $slugs; ?>">
+                        <figure class="portfolio-item col-sm-4 item<?php echo $benawp_slugs; ?>">
                             <a
                                     href="<?php the_permalink(); ?>"
                                     title="<?php the_title_attribute(); ?>"
