@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 13:38+0300\n"
-"PO-Revision-Date: 2022-09-12 13:39+0300\n"
+"POT-Creation-Date: 2022-09-28 08:23+0300\n"
+"PO-Revision-Date: 2022-09-28 08:23+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -197,7 +197,7 @@ msgstr[1] ""
 
 #: functions.php:396
 #, php-format
-msgid "Ce thème sera beaucoup plus mieux avec le plugin suivant: %1$s."
+msgid "La page de contact de ce thème aura besoin du plugin suivant: %1$s."
 msgid_plural ""
 "Ce thème sera beaucoup plus mieux avec les plugin suivants: %1$s."
 msgstr[0] ""
@@ -290,29 +290,6 @@ msgstr ""
 #: functions.php:414
 #, php-format
 msgid "Tous les plugins sont installés et activés avec succès. %s"
-msgstr ""
-
-#: functions.php:435
-msgid "Blue Quote"
-msgstr ""
-
-#: functions.php:451
-msgid "Deux boutons"
-msgstr ""
-
-#: functions.php:452
-msgctxt "Block pattern description"
-msgid ""
-"Deux boutons horizontaux, le bouton de gauche est rempli et le bouton de "
-"droite est souligné."
-msgstr ""
-
-#: functions.php:453
-msgid "Bouton 1"
-msgstr ""
-
-#: functions.php:453
-msgid "Bouton 2"
 msgstr ""
 
 #: header.php:39
@@ -815,17 +792,33 @@ msgstr ""
 msgid "Dev. Plugins, Dev. Thèmes & Sites Web."
 msgstr ""
 
-#: templates/template-contact.php:31
+#: templates/template-contact.php:48
+msgid ""
+"IMPORTANT : Il semble que vous avez plusieurs formulaire dont le nom "
+"contient le mot \"contact\"."
+msgstr ""
+
+#: templates/template-contact.php:50
+msgid ""
+"Mettez \"contact\" seulement pour le nom du formulaire de contact que vous "
+"voulez affichez ici. Merci"
+msgstr ""
+
+#: templates/template-contact.php:60
 msgid "Oups, pas de formulaire."
 msgstr ""
 
-#: templates/template-contact.php:33 templates/template-contact.php:43
+#: templates/template-contact.php:62
+msgid "Veuillez créer un svp."
+msgstr ""
+
+#: templates/template-contact.php:64 templates/template-contact.php:77
 msgid ""
 "IMPORTANT : Le titre du formulaire de contact doit contenir le mot clé "
 "\"contact\"."
 msgstr ""
 
-#: templates/template-contact.php:41
+#: templates/template-contact.php:75
 #, php-format
 msgid ""
 "Veuillez installer puis activer le plugin <a class=\"wp-form-link\" target="
